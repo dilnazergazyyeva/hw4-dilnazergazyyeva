@@ -1,0 +1,13 @@
+{
+  "run": 1,
+  "strategy": "s3",
+  "correct": 1,
+  "n": 1,
+  "unanswered": 0,
+  "input_tokens": 2370,
+  "output_tokens": 164,
+  "median_seconds": 8.66,
+  "total_seconds": 8.7,
+  "cost_usd": 0.0007,
+  "temperature_rejected_by_model": false
+}

@@ -9,6 +9,7 @@ from pathlib import Path
 import tools
 
 MODEL = "gpt-5.6-luna"
+REASONING_EFFORT = "none"  # the model rejects tools in /chat/completions unless reasoning is off
 K = 5                 # S2 samples per question
 S2_TEMPERATURE = 1.0  # needed so the 5 samples can differ (dropped automatically if the model refuses it)
 MAX_ROUNDS = 12       # S3 round limit
@@ -54,6 +55,7 @@ SYSTEM_TOOLS = ("You answer questions about the Nine Rivers Region, a made-up re
 def chat(messages, usage, tools_defs=None, temperature=None):
     global TEMPERATURE_REJECTED
     kw = dict(model=MODEL, messages=messages)
+    kw["reasoning_effort"] = REASONING_EFFORT
     if tools_defs:
         kw["tools"] = tools_defs
     if temperature is not None and not TEMPERATURE_REJECTED:

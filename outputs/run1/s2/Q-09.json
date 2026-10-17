@@ -1,0 +1,80 @@
+{
+  "samples": [
+    {
+      "raw": "Brightwater’s corrected area is 921.4 km², so its 2025 population density is 44,675 ÷ 921.4 ≈ 48.5 residents/km².\n\nMillbrook’s density is 37,203 ÷ 758.6 ≈ 49.0 residents/km².\n\nMillbrook is higher by approximately 0.5 residents/km².\n\nANSWER: Millbrook | 0.5",
+      "parsed": [
+        "millbrook",
+        0.5
+      ]
+    },
+    {
+      "raw": "Brightwater’s corrected density: 44,675 ÷ 921.4 = 48.5 residents/km².  \nMillbrook’s density: 37,203 ÷ 758.6 = 49.1 residents/km².  \nMillbrook is higher by 0.6 residents/km².\n\nANSWER: Millbrook | 0.6",
+      "parsed": [
+        "millbrook",
+        0.6
+      ]
+    },
+    {
+      "raw": "Brightwater’s corrected density: 44,675 ÷ 921.4 = 48.5 residents/km².  \nMillbrook’s density: 37,203 ÷ 758.6 = 49.1 residents/km².  \nMillbrook is higher by 0.7 residents/km².\n\nANSWER: Millbrook | 0.7",
+      "parsed": [
+        "millbrook",
+        0.7
+      ]
+    },
+    {
+      "raw": "Brightwater’s corrected 2025 density is \\(44,675 \\div 921.4 \\approx 48.5\\) residents per square kilometre.\n\nMillbrook’s 2025 density is \\(37,203 \\div 758.6 \\approx 49.1\\) residents per square kilometre.\n\nMillbrook is higher by approximately \\(0.6\\) residents per square kilometre.\n\nANSWER: Millbrook | 0.6",
+      "parsed": [
+        "millbrook",
+        0.6
+      ]
+    },
+    {
+      "raw": "Brightwater’s corrected density: 44,675 ÷ 921.4 ≈ 48.5 residents/km².  \nMillbrook’s density: 37,203 ÷ 758.6 ≈ 49.0 residents/km².  \n\nMillbrook is higher by approximately 0.5 residents/km².\n\nANSWER: Millbrook | 0.5",
+      "parsed": [
+        "millbrook",
+        0.5
+      ]
+    }
+  ],
+  "votes": [
+    [
+      [
+        "millbrook",
+        0.5
+      ],
+      2
+    ],
+    [
+      [
+        "millbrook",
+        0.6
+      ],
+      2
+    ],
+    [
+      [
+        "millbrook",
+        0.7
+      ],
+      1
+    ]
+  ],
+  "parsed": [
+    "millbrook",
+    0.5
+  ],
+  "usage": {
+    "calls": 5,
+    "input_tokens": 11080,
+    "output_tokens": 418
+  },
+  "unanswered": false,
+  "temperature_used": 1.0,
+  "seconds": 10.273,
+  "id": "Q-09",
+  "expected": {
+    "answer": "Millbrook",
+    "value": 0.6
+  },
+  "correct": true
+}

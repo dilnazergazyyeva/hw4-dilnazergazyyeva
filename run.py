@@ -52,7 +52,7 @@ def main():
         S.chat(msgs, u2, tools_defs=tools.tool_definitions())
         d = u2["input_tokens"] - u1["input_tokens"]
         (OUT / "tool_definition_tokens.json").write_text(json.dumps(
-            {"without_tools": u1["input_tokens"], "with_tools": u2["input_tokens"], "difference": d}, indent=2))
+            {"without_tools": u1["input_tokens"], "with_tools": u2["input_tokens"], "difference": d}, indent=2), encoding="utf-8")    
         print("tool definitions add", d, "input tokens per request")
         return
 
@@ -74,7 +74,7 @@ def main():
             except Exception as e:  # log and continue; the question counts as unanswered
                 res = {"id": q["id"], "error": f"{type(e).__name__}: {e}", "parsed": None, "correct": False,
                        "unanswered": True, "seconds": 0, "usage": S.new_usage()}
-            (folder / f"{q['id']}.json").write_text(json.dumps(res, indent=2, ensure_ascii=False))
+            (folder / f"{q['id']}.json").write_text(json.dumps(res, indent=2, ensure_ascii=False), encoding="utf-8")
             results.append(res)
             print(st, q["id"], "OK " if res["correct"] else "BAD", res["parsed"], f"{res['seconds']}s")
         tin = sum(r["usage"]["input_tokens"] for r in results)
@@ -86,7 +86,7 @@ def main():
                "median_seconds": round(statistics.median(secs), 2), "total_seconds": round(sum(secs), 1), "cost_usd": cost,
                "temperature_rejected_by_model": S.TEMPERATURE_REJECTED}
         rows.append(row)
-        (folder / "summary.json").write_text(json.dumps(row, indent=2))
+        (folder / "summary.json").write_text(json.dumps(row, indent=2), encoding="utf-8")
     print(json.dumps(rows, indent=2))
 
 
