@@ -192,8 +192,40 @@ None so far. <!-- ✏️ If you change a tool, the loop or the rules while you t
 
 ### B2 — Tests
 
-```text
-<!-- ✏️ run: python -m pytest -v   and paste the real output here -->
+```
+================================================== test session starts ==================================================
+platform win32 -- Python 3.13.15, pytest-9.1.1, pluggy-1.7.0 -- C:\Users\user\AppData\Local\Programs\Python\Python313\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\user\ai hw\hw4-dilnazergazyyeva
+plugins: anyio-4.10.0
+collected 24 items                                                                                                       
+
+tests/test_tools.py::test_lookup_correct_2025_number PASSED                                                        [  4%]
+tests/test_tools.py::test_lookup_case_and_spaces_ok PASSED                                                         [  8%]
+tests/test_tools.py::test_lookup_misspelled_name_suggests PASSED                                                   [ 12%]
+tests/test_tools.py::test_lookup_similar_names_not_mixed_up PASSED                                                 [ 16%]
+tests/test_tools.py::test_lookup_archived_profile_not_used PASSED                                                  [ 20%]
+tests/test_tools.py::test_lookup_correction_notice_applied PASSED                                                  [ 25%]
+tests/test_tools.py::test_lookup_water_unit_normalised PASSED                                                      [ 29%]
+tests/test_tools.py::test_lookup_population_went_down_even_though_text_says_up PASSED                              [ 33%]
+tests/test_tools.py::test_lookup_tariff_and_bad_inputs_never_crash PASSED                                          [ 37%]
+tests/test_tools.py::test_calc_example_from_brief PASSED                                                           [ 41%]
+tests/test_tools.py::test_calc_division_and_precedence PASSED                                                      [ 45%]
+tests/test_tools.py::test_calc_refuses_dangerous[__import__('os').system('echo hi')] PASSED                        [ 50%]
+tests/test_tools.py::test_calc_refuses_dangerous[(1).__class__] PASSED                                             [ 54%]
+tests/test_tools.py::test_calc_refuses_dangerous[9**9**9] PASSED                                                   [ 58%]
+tests/test_tools.py::test_calc_refuses_dangerous[open('x')] PASSED                                                 [ 62%]
+tests/test_tools.py::test_calc_refuses_dangerous[[1,2]] PASSED                                                     [ 66%]
+tests/test_tools.py::test_calc_refuses_dangerous['a'*10] PASSED                                                    [ 70%]
+tests/test_tools.py::test_calc_refuses_dangerous[x + 1] PASSED                                                     [ 75%]
+tests/test_tools.py::test_calc_refuses_dangerous[lambda: 1] PASSED                                                 [ 79%]
+tests/test_tools.py::test_calc_refuses_dangerous[1 if 1 else 2] PASSED                                             [ 83%]
+tests/test_tools.py::test_calc_division_by_zero_and_huge PASSED                                                    [ 87%]
+tests/test_tools.py::test_calc_bad_input_types_and_syntax PASSED                                                   [ 91%]
+tests/test_tools.py::test_run_tool_always_returns_json_string PASSED                                               [ 95%]
+tests/test_tools.py::test_tool_definitions_shape PASSED                                                            [100%]
+
+================================================== 24 passed in 0.68s ===================================================
 ```
 
 ### B3 — The loop
