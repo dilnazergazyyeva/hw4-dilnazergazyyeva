@@ -1,0 +1,20 @@
+{
+  "raw": "Redfen: 3,147 ÷ 10 = 314.70 pupils per school  \nAshgrove: 8,837 ÷ 24 = 368.21 pupils per school  \nMillbrook: 5,562 ÷ 15 = 370.80 pupils per school  \n\nMillbrook is highest, and Redfen is lowest. The difference is 370.80 − 314.70 = 56.10.\n\nANSWER: Redfen | 56.10",
+  "parsed": [
+    "redfen",
+    56.1
+  ],
+  "usage": {
+    "calls": 1,
+    "input_tokens": 2223,
+    "output_tokens": 102
+  },
+  "unanswered": false,
+  "seconds": 1.635,
+  "id": "Q-11",
+  "expected": {
+    "answer": "Redfen",
+    "value": 56.1
+  },
+  "correct": true
+}

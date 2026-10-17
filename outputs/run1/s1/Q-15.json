@@ -1,0 +1,20 @@
+{
+  "raw": "Kelmarsh: 3,268 ÷ 11 = 297.09 pupils per school  \nRedfen: 3,147 ÷ 10 = 314.70 pupils per school  \n\nRedfen has more by 17.61 pupils per school.\n\nANSWER: Redfen | 17.61",
+  "parsed": [
+    "redfen",
+    17.61
+  ],
+  "usage": {
+    "calls": 1,
+    "input_tokens": 2209,
+    "output_tokens": 66
+  },
+  "unanswered": false,
+  "seconds": 1.243,
+  "id": "Q-15",
+  "expected": {
+    "answer": "Redfen",
+    "value": 17.61
+  },
+  "correct": true
+}

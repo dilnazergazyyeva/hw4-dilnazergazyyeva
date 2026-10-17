@@ -1,0 +1,20 @@
+{
+  "raw": "Brightwater used 3,315 megalitres, or 3,315,000 cubic metres:\n\n3,315,000 × 142.35 = 471.08 million tenge\n\nMillbrook used 2,806 megalitres, or 2,806,000 cubic metres:\n\n2,806,000 × 142.35 = 399.43 million tenge\n\nBrightwater's households paid 71.65 million tenge more.\n\nANSWER: Brightwater | 71.65",
+  "parsed": [
+    "brightwater",
+    71.65
+  ],
+  "usage": {
+    "calls": 1,
+    "input_tokens": 2216,
+    "output_tokens": 108
+  },
+  "unanswered": false,
+  "seconds": 1.784,
+  "id": "Q-08",
+  "expected": {
+    "answer": "Brightwater",
+    "value": 72.46
+  },
+  "correct": false
+}

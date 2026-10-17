@@ -1,0 +1,112 @@
+{
+  "raw": "Redfen has the fewest pupils per school. The difference between the highest and lowest is 56.10 pupils per school.\n\nANSWER: Redfen | 56.10",
+  "parsed": [
+    "redfen",
+    56.1
+  ],
+  "usage": {
+    "calls": 3,
+    "input_tokens": 2796,
+    "output_tokens": 306
+  },
+  "rounds": 3,
+  "tool_calls": [
+    {
+      "round": 1,
+      "id": "call_kF33VMc4eZSwnpZRbflNsCfX",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Redfen\", \"field\": \"pupils_2025_26\"}",
+      "result": "{\"district\": \"Redfen\", \"field\": \"pupils_2025_26\", \"value\": 3147, \"unit\": \"pupils enrolled in 2025/26\", \"source\": \"NR-09\"}",
+      "seconds": 4.9e-05
+    },
+    {
+      "round": 1,
+      "id": "call_41aWNfq4M249wsQ8PvANh8tg",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Redfen\", \"field\": \"schools\"}",
+      "result": "{\"district\": \"Redfen\", \"field\": \"schools\", \"value\": 10, \"unit\": \"schools\", \"source\": \"NR-09\"}",
+      "seconds": 2.9e-05
+    },
+    {
+      "round": 1,
+      "id": "call_h4Cud7temicdwzp6b6hAQXiO",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Ashgrove\", \"field\": \"pupils_2025_26\"}",
+      "result": "{\"district\": \"Ashgrove\", \"field\": \"pupils_2025_26\", \"value\": 8837, \"unit\": \"pupils enrolled in 2025/26\", \"source\": \"NR-10\"}",
+      "seconds": 2.5e-05
+    },
+    {
+      "round": 1,
+      "id": "call_Yt1n4cfHoSFhFLsDek9pOZ10",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Ashgrove\", \"field\": \"schools\"}",
+      "result": "{\"district\": \"Ashgrove\", \"field\": \"schools\", \"value\": 24, \"unit\": \"schools\", \"source\": \"NR-10\"}",
+      "seconds": 2.1e-05
+    },
+    {
+      "round": 1,
+      "id": "call_9XcZueuZNr3YdBL541Kb767U",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Millbrook\", \"field\": \"pupils_2025_26\"}",
+      "result": "{\"district\": \"Millbrook\", \"field\": \"pupils_2025_26\", \"value\": 5562, \"unit\": \"pupils enrolled in 2025/26\", \"source\": \"NR-11\"}",
+      "seconds": 2.1e-05
+    },
+    {
+      "round": 1,
+      "id": "call_1jgZNUU957h6TJdxki84TLt7",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Millbrook\", \"field\": \"schools\"}",
+      "result": "{\"district\": \"Millbrook\", \"field\": \"schools\", \"value\": 15, \"unit\": \"schools\", \"source\": \"NR-11\"}",
+      "seconds": 2e-05
+    },
+    {
+      "round": 2,
+      "id": "call_C7tmNtF6SyT1jItME5h9yiYS",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"3147 / 10\"}",
+      "result": "{\"expression\": \"3147 / 10\", \"result\": 314.7}",
+      "seconds": 7.8e-05
+    },
+    {
+      "round": 2,
+      "id": "call_OFMyFFVJsozYyFoQlP1wLc3X",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"8837 / 24\"}",
+      "result": "{\"expression\": \"8837 / 24\", \"result\": 368.2083333333333}",
+      "seconds": 4.3e-05
+    },
+    {
+      "round": 2,
+      "id": "call_PTMi8JaDFur7J3tXnVQoqtUm",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"5562 / 15\"}",
+      "result": "{\"expression\": \"5562 / 15\", \"result\": 370.8}",
+      "seconds": 3.5e-05
+    },
+    {
+      "round": 2,
+      "id": "call_3WNKNIEpc06f2oU2Tu11SMu4",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"8837 / 24 - 3147 / 10\"}",
+      "result": "{\"expression\": \"8837 / 24 - 3147 / 10\", \"result\": 53.508333333333326}",
+      "seconds": 4.5e-05
+    },
+    {
+      "round": 2,
+      "id": "call_yDLp9U1kyZqgzyovaHgesKed",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"5562 / 15 - 3147 / 10\"}",
+      "result": "{\"expression\": \"5562 / 15 - 3147 / 10\", \"result\": 56.10000000000002}",
+      "seconds": 4.1e-05
+    }
+  ],
+  "hit_round_limit": false,
+  "unanswered": false,
+  "seconds": 4.387,
+  "id": "Q-11",
+  "expected": {
+    "answer": "Redfen",
+    "value": 56.1
+  },
+  "correct": true
+}

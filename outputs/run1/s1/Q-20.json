@@ -1,0 +1,20 @@
+{
+  "raw": "Harrowfield had the largest 2025 budget per resident.\n\n- Ossbridge: 9,284.5 million ÷ 52,904 = 175,494 tenge per resident\n- Ashgrove: 10,488.1 million ÷ 58,760 = 178,486 tenge per resident\n- Harrowfield: 16,021.7 million ÷ 90,212 = 177,601 tenge per resident\n\nIt exceeded the lowest, Ossbridge, by 2,107 tenge per resident.\n\nANSWER: Harrowfield | 2107",
+  "parsed": [
+    "harrowfield",
+    2107.0
+  ],
+  "usage": {
+    "calls": 1,
+    "input_tokens": 2221,
+    "output_tokens": 126
+  },
+  "unanswered": false,
+  "seconds": 1.775,
+  "id": "Q-20",
+  "expected": {
+    "answer": "Ashgrove",
+    "value": 2993
+  },
+  "correct": false
+}

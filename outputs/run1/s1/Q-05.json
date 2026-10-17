@@ -1,0 +1,20 @@
+{
+  "raw": "Stonecairn: 2,884.6 million ÷ 14,926 = 193,142 tenge per resident.  \nColdharbour: 2,366.9 million ÷ 11,407 = 207,486 tenge per resident.  \nColdharbour was higher by 14,344 tenge per resident.\n\nANSWER: Coldharbour | 14344",
+  "parsed": [
+    "coldharbour",
+    14344.0
+  ],
+  "usage": {
+    "calls": 1,
+    "input_tokens": 2210,
+    "output_tokens": 84
+  },
+  "unanswered": false,
+  "seconds": 1.854,
+  "id": "Q-05",
+  "expected": {
+    "answer": "Coldharbour",
+    "value": 14235
+  },
+  "correct": false
+}

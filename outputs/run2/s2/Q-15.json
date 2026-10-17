@@ -1,0 +1,87 @@
+{
+  "samples": [
+    {
+      "raw": "Kelmarsh: 3,268 ÷ 11 = 296.**?** pupils per school.  \nRedfen: 3,147 ÷ 10 = 314.70 pupils per school.  \nDifference: 314.70 − 296.?? = 17.70 pupils per school.\n\nANSWER: Redfen | 17.70",
+      "parsed": [
+        "redfen",
+        17.7
+      ]
+    },
+    {
+      "raw": "Kelmarsh: 3,268 ÷ 11 = 296. не pupils per school.  \nRedfen: 3,147 ÷ 10 = 314.70 pupils per school.  \nRedfen has more by 18.70 pupils per school.\n\nANSWER: Redfen | 18.70",
+      "parsed": [
+        "redfen",
+        18.7
+      ]
+    },
+    {
+      "raw": "Kelmarsh: 3,268 ÷ 11 = 296.73 pupils per school.  \nRedfen: 3,147 ÷ 10 = 314.70 pupils per school.  \nDifference: 314.70 − 296.73 = 17.97 pupils per school.\n\nANSWER: Redfen | 17.97",
+      "parsed": [
+        "redfen",
+        17.97
+      ]
+    },
+    {
+      "raw": "Kelmarsh: 3,268 ÷ 11 = 297.09 pupils per school.  \nRedfen: 3,147 ÷ 10 = 314.70 pupils per school.  \nDifference: 314.70 − 297.09 = 17.61 pupils per school.\n\nANSWER: Redfen | 17.61",
+      "parsed": [
+        "redfen",
+        17.61
+      ]
+    },
+    {
+      "raw": "Kelmarsh: 3,268 ÷ 11 = 296.73 pupils per school.  \nRedfen: 3,147 ÷ 10 = 314.70 pupils per school.  \nDifference: 314.70 − 296.73 = 17.97 pupils per school.\n\nANSWER: Redfen | 17.97",
+      "parsed": [
+        "redfen",
+        17.97
+      ]
+    }
+  ],
+  "votes": [
+    [
+      [
+        "redfen",
+        17.97
+      ],
+      2
+    ],
+    [
+      [
+        "redfen",
+        17.7
+      ],
+      1
+    ],
+    [
+      [
+        "redfen",
+        18.7
+      ],
+      1
+    ],
+    [
+      [
+        "redfen",
+        17.61
+      ],
+      1
+    ]
+  ],
+  "parsed": [
+    "redfen",
+    17.97
+  ],
+  "usage": {
+    "calls": 5,
+    "input_tokens": 11085,
+    "output_tokens": 370
+  },
+  "unanswered": false,
+  "temperature_used": 1.0,
+  "seconds": 6.958,
+  "id": "Q-15",
+  "expected": {
+    "answer": "Redfen",
+    "value": 17.61
+  },
+  "correct": false
+}

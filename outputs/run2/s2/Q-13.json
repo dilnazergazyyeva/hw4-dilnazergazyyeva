@@ -1,0 +1,66 @@
+{
+  "samples": [
+    {
+      "raw": "Population losses as percentages of the 2020 populations:\n\n- Ossford: \\(578 / 31,560 \\times 100 = 1.83\\%\\)\n- Stonecairn: \\(547 / 15,473 \\times 100 = 3.54\\%\\)\n- Coldharbour: \\(495 / 11,902 \\times 100 = 4.16\\%\\)\n\nColdharbour lost the largest percentage.\n\nANSWER: Coldharbour | 4.16",
+      "parsed": [
+        "coldharbour",
+        4.16
+      ]
+    },
+    {
+      "raw": "Stonecairn lost the largest percentage:\n\n- Ossford: (31,560 − 30,982) ÷ 31,560 × 100 = 1.83%\n- Stonecairn: (15,473 − 14,926) ÷ 15,473 × 100 = 3.53%\n- Coldharbour: (11,902 − 11,407) ÷ 11,902 × 100 = 4.16%\n\nANSWER: Coldharbour | 4.16",
+      "parsed": [
+        "coldharbour",
+        4.16
+      ]
+    },
+    {
+      "raw": "Stonecairn lost the largest percentage:\n\n- Ossford: \\(578 / 31,560 \\times 100 = 1.83\\%\\)\n- Stonecairn: \\(547 / 15,473 \\times 100 = 3.54\\%\\)\n- Coldharbour: \\(495 / 11,902 \\times 100 = 4.16\\%\\)\n\nANSWER: Coldharbour | 4.16",
+      "parsed": [
+        "coldharbour",
+        4.16
+      ]
+    },
+    {
+      "raw": "Percentage losses:\n\n- Ossford: \\( (31,560 - 30,982) / 31,560 \\times 100 = 1.83\\% \\)\n- Stonecairn: \\( (15,473 - 14,926) / 15,473 \\times 100 = 3.54\\% \\)\n- Coldharbour: \\( (11,902 - 11,407) / 11,902 \\times 100 = 4.16\\% \\)\n\nColdharbour lost the largest percentage.\n\nANSWER: Coldharbour | 4.16",
+      "parsed": [
+        "coldharbour",
+        4.16
+      ]
+    },
+    {
+      "raw": "Stonecairn lost the largest percentage:\n\n- Ossford: \\(578 / 31,560 \\times 100 = 1.83\\%\\)\n- Stonecairn: \\(547 / 15,473 \\times 100 = 3.54\\%\\)\n- Coldharbour: \\(495 / 11,902 \\times 100 = 4.16\\%\\)\n\nANSWER: Coldharbour | 4.16",
+      "parsed": [
+        "coldharbour",
+        4.16
+      ]
+    }
+  ],
+  "votes": [
+    [
+      [
+        "coldharbour",
+        4.16
+      ],
+      5
+    ]
+  ],
+  "parsed": [
+    "coldharbour",
+    4.16
+  ],
+  "usage": {
+    "calls": 5,
+    "input_tokens": 11130,
+    "output_tokens": 530
+  },
+  "unanswered": false,
+  "temperature_used": 1.0,
+  "seconds": 8.0,
+  "id": "Q-13",
+  "expected": {
+    "answer": "Coldharbour",
+    "value": 4.16
+  },
+  "correct": true
+}

@@ -1,0 +1,80 @@
+{
+  "samples": [
+    {
+      "raw": "Millbrook grew from 34,590 to 37,203, a factor of 37,203 ÷ 34,590. Applying the same percentage growth to 2025 gives:\n\n37,203 × (37,203 ÷ 34,590) ≈ 40,012\n\nThis exceeds 40,000 residents.\n\nANSWER: yes | 40012",
+      "parsed": [
+        "yes",
+        40012.0
+      ]
+    },
+    {
+      "raw": "Millbrook’s growth from 2020 to 2025 was:\n\n\\[\n\\frac{37,203-34,590}{34,590} \\approx 7.5548\\%\n\\]\n\nApplying the same percentage growth to its 2025 population:\n\n\\[\n37,203 \\times 1.075548 \\approx 40,014\n\\]\n\nThis exceeds 40,000 residents.\n\nANSWER: yes | 40014",
+      "parsed": [
+        "yes",
+        40014.0
+      ]
+    },
+    {
+      "raw": "Millbrook’s population grew from 34,590 to 37,203, an increase of about 7.5536%. Applying the same percentage growth to 37,203 gives a projected 2030 population of 40,014, which exceeds 40,000.\n\nANSWER: yes | 40014",
+      "parsed": [
+        "yes",
+        40014.0
+      ]
+    },
+    {
+      "raw": "Millbrook grew from 34,590 to 37,203, a factor of 37,203 ÷ 34,590. Applying the same percentage growth again:\n\n37,203 × (37,203 ÷ 34,590) ≈ 40,012.8\n\nRounded to 0 decimal places, the projected population is 40,013, so it would exceed 40,000.\n\nANSWER: yes | 40013",
+      "parsed": [
+        "yes",
+        40013.0
+      ]
+    },
+    {
+      "raw": "Millbrook grew from 34,590 to 37,203, a factor of 37,203 ÷ 34,590. Applying the same percentage growth to 2025:\n\n37,203 × (37,203 ÷ 34,590) ≈ 40,012.\n\nThis exceeds 40,000 residents.\n\nANSWER: yes | 40012",
+      "parsed": [
+        "yes",
+        40012.0
+      ]
+    }
+  ],
+  "votes": [
+    [
+      [
+        "yes",
+        40012.0
+      ],
+      2
+    ],
+    [
+      [
+        "yes",
+        40014.0
+      ],
+      2
+    ],
+    [
+      [
+        "yes",
+        40013.0
+      ],
+      1
+    ]
+  ],
+  "parsed": [
+    "yes",
+    40012.0
+  ],
+  "usage": {
+    "calls": 5,
+    "input_tokens": 11195,
+    "output_tokens": 410
+  },
+  "unanswered": false,
+  "temperature_used": 1.0,
+  "seconds": 8.672,
+  "id": "Q-18",
+  "expected": {
+    "answer": "yes",
+    "value": 40013
+  },
+  "correct": true
+}

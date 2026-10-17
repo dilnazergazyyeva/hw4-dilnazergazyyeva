@@ -1,0 +1,80 @@
+{
+  "raw": "Ashgrove used more water, by 4.9 litres per resident per day.\n\nANSWER: Ashgrove | 4.9",
+  "parsed": [
+    "ashgrove",
+    4.9
+  ],
+  "usage": {
+    "calls": 4,
+    "input_tokens": 3545,
+    "output_tokens": 240
+  },
+  "rounds": 4,
+  "tool_calls": [
+    {
+      "round": 1,
+      "id": "call_OcQ1kFPf4HWYJR4QBPPVl0gL",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Tarnvale\", \"field\": \"water_use_m3\"}",
+      "result": "{\"district\": \"Tarnvale\", \"field\": \"water_use_m3\", \"value\": 5207000, \"unit\": \"cubic metres, household water use in 2025\", \"source\": \"NR-03\"}",
+      "seconds": 4.9e-05
+    },
+    {
+      "round": 1,
+      "id": "call_IDsivYGxWbsTPC9ZOAZHGGqE",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Tarnvale\", \"field\": \"population_2025\"}",
+      "result": "{\"district\": \"Tarnvale\", \"field\": \"population_2025\", \"value\": 71388, \"unit\": \"residents, 2025 census\", \"source\": \"NR-03\"}",
+      "seconds": 2.8e-05
+    },
+    {
+      "round": 1,
+      "id": "call_r2kH6fzQDhXMHDdwNj0vPF9t",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Ashgrove\", \"field\": \"water_use_m3\"}",
+      "result": "{\"district\": \"Ashgrove\", \"field\": \"water_use_m3\", \"value\": 4390000, \"unit\": \"cubic metres, household water use in 2025\", \"source\": \"NR-10\"}",
+      "seconds": 2.3e-05
+    },
+    {
+      "round": 1,
+      "id": "call_ujy6jNNlHvvEI3LvfowgLYso",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Ashgrove\", \"field\": \"population_2025\"}",
+      "result": "{\"district\": \"Ashgrove\", \"field\": \"population_2025\", \"value\": 58760, \"unit\": \"residents, 2025 census\", \"source\": \"NR-10\"}",
+      "seconds": 2e-05
+    },
+    {
+      "round": 2,
+      "id": "call_hLZxggYzTSMAabess6gEglRJ",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"5207000 / 71388 / 365 * 1000\"}",
+      "result": "{\"expression\": \"5207000 / 71388 / 365 * 1000\", \"result\": 199.8340536877001}",
+      "seconds": 9.6e-05
+    },
+    {
+      "round": 2,
+      "id": "call_zXCKYvGz0Ski1D8RVIuOSPbM",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"4390000 / 58760 / 365 * 1000\"}",
+      "result": "{\"expression\": \"4390000 / 58760 / 365 * 1000\", \"result\": 204.6868151850574}",
+      "seconds": 5.4e-05
+    },
+    {
+      "round": 3,
+      "id": "call_hrTNuP62UmSmOP7PXqAVxWdH",
+      "tool": "calculate",
+      "arguments": "{\"expression\":\"204.6868151850574 - 199.8340536877001\"}",
+      "result": "{\"expression\": \"204.6868151850574 - 199.8340536877001\", \"result\": 4.8527614973573066}",
+      "seconds": 8.7e-05
+    }
+  ],
+  "hit_round_limit": false,
+  "unanswered": false,
+  "seconds": 6.476,
+  "id": "Q-14",
+  "expected": {
+    "answer": "Ashgrove",
+    "value": 4.9
+  },
+  "correct": true
+}

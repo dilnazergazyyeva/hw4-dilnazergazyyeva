@@ -1,0 +1,94 @@
+{
+  "samples": [
+    {
+      "raw": "Harrowfield households used 7,146 megalitres, or 7,146,000 cubic metres. At 142.35 tenge per cubic metre, that is 1,017,? Wait calculation: 7,146,000 × 142.35 = 1,017,? Total per resident is approximately 11,? Ossbridge used 3,862,000 cubic metres for 52,904 residents, while Harrowfield used 7,146,000 cubic metres for 90,212 residents.\n\nHarrowfield: 7,146,000 ÷ 90,212 × 142.35 ≈ 11,279 tenge per resident.  \nOssbridge: 3,862,000 ÷ 52,904 × 142.35 ≈ 10,391 tenge per resident.  \n\nThe difference is approximately 888 tenge per resident.\n\nANSWER: Harrowfield | 888",
+      "parsed": [
+        "harrowfield",
+        888.0
+      ]
+    },
+    {
+      "raw": "Harrowfield’s per-resident water cost was higher.\n\n- Harrowfield: 7,146 ML ÷ 90,212 residents × 1,000 × 142.35 = 11,283 tenge per resident\n- Ossbridge: 3,862 ML ÷ 52,904 residents × 1,000 × 142.35 = 10,390 tenge per resident\n- Difference: 893 tenge per resident\n\nANSWER: Harrowfield | 893",
+      "parsed": [
+        "harrowfield",
+        893.0
+      ]
+    },
+    {
+      "raw": "Harrowfield’s water cost per resident:\n- 7,146 ML × 1,000 × 142.35 ÷ 90,212 = 11,278 tenge per resident\n\nOssbridge’s:\n- 3,862 ML × 1,000 × 142.35 ÷ 52,904 = 10,389 tenge per resident\n\nDifference: 889 tenge per resident.\n\nANSWER: Harrowfield | 889",
+      "parsed": [
+        "harrowfield",
+        889.0
+      ]
+    },
+    {
+      "raw": "Harrowfield: 7,146 ML ÷ 90,212 residents = 0.079214 ML per resident.  \nOssbridge: 3,862 ML ÷ 52,904 residents = 0.073000 ML per resident.\n\nThe difference is 0.006214 ML = 6.214 cubic metres per resident. At 142.35 tenge per cubic metre, that is 884.6 tenge, rounded to 885.\n\nANSWER: Harrowfield | 885",
+      "parsed": [
+        "harrowfield",
+        885.0
+      ]
+    },
+    {
+      "raw": "Harrowfield’s household water use was 7,146 megalitres, or 7,146,000 cubic metres. At 142.35 tenge per cubic metre, its total was 1,017,? Wait calculate: 7,146,000 × 142.35 = 1,017,? \n\nPer resident:\n- Harrowfield: \\(7,146,000 \\times 142.35 \\div 90,212 \\approx 11,279\\) tenge\n- Ossbridge: \\(3,862,000 \\times 142.35 \\div 52,904 \\approx 10,393\\) tenge\n\nDifference: approximately 886 tenge per resident.\n\nANSWER: Harrowfield | 886",
+      "parsed": [
+        "harrowfield",
+        886.0
+      ]
+    }
+  ],
+  "votes": [
+    [
+      [
+        "harrowfield",
+        888.0
+      ],
+      1
+    ],
+    [
+      [
+        "harrowfield",
+        893.0
+      ],
+      1
+    ],
+    [
+      [
+        "harrowfield",
+        889.0
+      ],
+      1
+    ],
+    [
+      [
+        "harrowfield",
+        885.0
+      ],
+      1
+    ],
+    [
+      [
+        "harrowfield",
+        886.0
+      ],
+      1
+    ]
+  ],
+  "parsed": [
+    "harrowfield",
+    888.0
+  ],
+  "usage": {
+    "calls": 5,
+    "input_tokens": 11140,
+    "output_tokens": 671
+  },
+  "unanswered": false,
+  "temperature_used": 1.0,
+  "seconds": 9.68,
+  "id": "Q-17",
+  "expected": {
+    "answer": "Harrowfield",
+    "value": 884
+  },
+  "correct": false
+}

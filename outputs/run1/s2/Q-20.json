@@ -1,0 +1,94 @@
+{
+  "samples": [
+    {
+      "raw": "2025 budget per resident:\n\n- Ossbridge: 9,284.5 million ÷ 52,904 = 175,490 tenge\n- Ashgrove: 10,488.1 million ÷ 58,760 = 178,489 tenge\n- Harrowfield: 16,021.7 million ÷ 90,212 = 177,602 tenge\n\nAshgrove had the largest budget per resident. It exceeded Ossbridge, the lowest, by 2,999 tenge per resident.\n\nANSWER: Ashgrove | 2999",
+      "parsed": [
+        "ashgrove",
+        2999.0
+      ]
+    },
+    {
+      "raw": "2025 budget per resident:\n\n- Ossbridge: 9,284,500,000 ÷ 52,904 ≈ 175,499 tenge\n- Ashgrove: 10,488,100,000 ÷ 58,760 ≈ 178,491 tenge\n- Harrowfield: 16,021,700,000 ÷ 90,212 ≈ 177,598 tenge\n\nAshgrove had the largest budget per resident. It exceeded Ossbridge, the lowest, by approximately 2,992 tenge per resident.\n\nANSWER: Ashgrove | 2992",
+      "parsed": [
+        "ashgrove",
+        2992.0
+      ]
+    },
+    {
+      "raw": "Budgets per resident:\n\n- Ossbridge: 9,284,500,000 ÷ 52,904 ≈ 175,586\n- Ashgrove: 10,488,100,000 ÷ 58,760 ≈ 178,488\n- Harrowfield: 16,021,700,000 ÷ 90,212 ≈ 177,596\n\nAshgrove had the largest budget per resident. It exceeded Ossbridge, the lowest, by approximately 2,902 tenge per resident.\n\nANSWER: Ashgrove | 2902",
+      "parsed": [
+        "ashgrove",
+        2902.0
+      ]
+    },
+    {
+      "raw": "2025 budget per resident:\n\n- Ossbridge: 9,284.5 million ÷ 52,904 = 175,581 tenge\n- Ashgrove: 10,488.1 million ÷ 58,760 = 178,465 tenge\n- Harrowfield: 16,021.7 million ÷ 90,212 = 177, six? approximately 177,603 tenge\n\nAshgrove had the largest budget per resident. It exceeded Ossbridge, the lowest, by approximately 2,884 tenge per resident.\n\nANSWER: Ashgrove | 2884",
+      "parsed": [
+        "ashgrove",
+        2884.0
+      ]
+    },
+    {
+      "raw": "2025 budget per resident:\n\n- Ossbridge: 9,284.5 million ÷ 52,904 = 175,490 tenge\n- Ashgrove: 10,488.1 million ÷ 58,760 = 178,483 tenge\n- Harrowfield: 16,021.7 million ÷ 90,212 = 177,553 tenge\n\nAshgrove had the largest figure. It exceeded Ossbridge, the lowest, by 2,993 tenge per resident.\n\nANSWER: Ashgrove | 2993",
+      "parsed": [
+        "ashgrove",
+        2993.0
+      ]
+    }
+  ],
+  "votes": [
+    [
+      [
+        "ashgrove",
+        2999.0
+      ],
+      1
+    ],
+    [
+      [
+        "ashgrove",
+        2992.0
+      ],
+      1
+    ],
+    [
+      [
+        "ashgrove",
+        2902.0
+      ],
+      1
+    ],
+    [
+      [
+        "ashgrove",
+        2884.0
+      ],
+      1
+    ],
+    [
+      [
+        "ashgrove",
+        2993.0
+      ],
+      1
+    ]
+  ],
+  "parsed": [
+    "ashgrove",
+    2999.0
+  ],
+  "usage": {
+    "calls": 5,
+    "input_tokens": 11145,
+    "output_tokens": 627
+  },
+  "unanswered": false,
+  "temperature_used": 1.0,
+  "seconds": 9.172,
+  "id": "Q-20",
+  "expected": {
+    "answer": "Ashgrove",
+    "value": 2993
+  },
+  "correct": false
+}

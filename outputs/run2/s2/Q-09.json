@@ -1,0 +1,73 @@
+{
+  "samples": [
+    {
+      "raw": "Brightwater’s corrected density: 44,675 ÷ 921.4 = 48.5 residents/km².  \nMillbrook’s density: 37,203 ÷ 758.6 = 49.0 residents/km².  \nMillbrook is higher by 0.5 residents/km².\n\nANSWER: Millbrook | 0.5",
+      "parsed": [
+        "millbrook",
+        0.5
+      ]
+    },
+    {
+      "raw": "Brightwater: 44,675 ÷ 921.4 = 48.5 residents/km²  \nMillbrook: 37,203 ÷ 758.6 = 49.1 residents/km²  \n\nMillbrook has the higher population density by 0.6 residents/km².\n\nANSWER: Millbrook | 0.6",
+      "parsed": [
+        "millbrook",
+        0.6
+      ]
+    },
+    {
+      "raw": "Brightwater density = 44,675 ÷ 921.4 = 48.5 residents/km².  \nMillbrook density = 37,203 ÷ 758.6 = 49.1 residents/km².  \n\nMillbrook is higher by 0.6 residents/km².\n\nANSWER: Millbrook | 0.6",
+      "parsed": [
+        "millbrook",
+        0.6
+      ]
+    },
+    {
+      "raw": "Brightwater’s corrected 2025 area is 921.4 km², so its population density is 44,675 ÷ 921.4 ≈ 48.5 residents/km².\n\nMillbrook’s population density is 37,203 ÷ 758.6 ≈ 49.0 residents/km².\n\nThe difference is approximately 0.5 residents/km².\n\nANSWER: Millbrook | 0.5",
+      "parsed": [
+        "millbrook",
+        0.5
+      ]
+    },
+    {
+      "raw": "Brightwater’s corrected density: 44,675 ÷ 921.4 = 48.5 residents/km².  \nMillbrook’s density: 37,203 ÷ 758.6 = 49.1 residents/km².  \nMillbrook is higher by 0.6 residents/km².\n\nANSWER: Millbrook | 0.6",
+      "parsed": [
+        "millbrook",
+        0.6
+      ]
+    }
+  ],
+  "votes": [
+    [
+      [
+        "millbrook",
+        0.6
+      ],
+      3
+    ],
+    [
+      [
+        "millbrook",
+        0.5
+      ],
+      2
+    ]
+  ],
+  "parsed": [
+    "millbrook",
+    0.6
+  ],
+  "usage": {
+    "calls": 5,
+    "input_tokens": 11080,
+    "output_tokens": 388
+  },
+  "unanswered": false,
+  "temperature_used": 1.0,
+  "seconds": 6.789,
+  "id": "Q-09",
+  "expected": {
+    "answer": "Millbrook",
+    "value": 0.6
+  },
+  "correct": true
+}

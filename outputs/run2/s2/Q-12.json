@@ -1,0 +1,66 @@
+{
+  "samples": [
+    {
+      "raw": "Harrowfield: 16,021.7 million tenge ÷ 13,904 pupils = 1,152.3 thousand tenge per pupil.\n\nTarnvale: 12,960.3 million tenge ÷ 10,652 pupils = 1,216.7 thousand tenge per pupil.\n\nTarnvale is higher by 64.4 thousand tenge per pupil.\n\nANSWER: Tarnvale | 64.4",
+      "parsed": [
+        "tarnvale",
+        64.4
+      ]
+    },
+    {
+      "raw": "Harrowfield: 16,021.7 million tenge ÷ 13,904 pupils = 1,152.3 thousand tenge per pupil.\n\nTarnvale: 12,960.3 million tenge ÷ 10,652 pupils = 1,216.7 thousand tenge per pupil.\n\nTarnvale is higher by 64.4 thousand tenge per pupil.\n\nANSWER: Tarnvale | 64.4",
+      "parsed": [
+        "tarnvale",
+        64.4
+      ]
+    },
+    {
+      "raw": "Harrowfield: 16,021.7 million tenge ÷ 13,904 pupils = 1,152.3 thousand tenge per pupil.  \nTarnvale: 12,960.3 million tenge ÷ 10,652 pupils = 1,216.7 thousand tenge per pupil.  \nTarnvale is higher by 64.4 thousand tenge per pupil.\n\nANSWER: Tarnvale | 64.4",
+      "parsed": [
+        "tarnvale",
+        64.4
+      ]
+    },
+    {
+      "raw": "Harrowfield: 16,021.7 million tenge ÷ 13,904 pupils = 1,152.3 thousand tenge per pupil.\n\nTarnvale: 12,960.3 million tenge ÷ 10,652 pupils = 1,216.7 thousand tenge per pupil.\n\nTarnvale is higher by 64.4 thousand tenge per pupil.\n\nANSWER: Tarnvale | 64.4",
+      "parsed": [
+        "tarnvale",
+        64.4
+      ]
+    },
+    {
+      "raw": "Harrowfield: 16,021.7 million tenge ÷ 13,904 pupils = 1,152.3 thousand tenge per pupil.\n\nTarnvale: 12,960.3 million tenge ÷ 10,652 pupils = 1,216.7 thousand tenge per pupil.\n\nTarnvale is higher by 64.4 thousand tenge per pupil.\n\nANSWER: Tarnvale | 64.4",
+      "parsed": [
+        "tarnvale",
+        64.4
+      ]
+    }
+  ],
+  "votes": [
+    [
+      [
+        "tarnvale",
+        64.4
+      ],
+      5
+    ]
+  ],
+  "parsed": [
+    "tarnvale",
+    64.4
+  ],
+  "usage": {
+    "calls": 5,
+    "input_tokens": 11095,
+    "output_tokens": 472
+  },
+  "unanswered": false,
+  "temperature_used": 1.0,
+  "seconds": 7.228,
+  "id": "Q-12",
+  "expected": {
+    "answer": "Tarnvale",
+    "value": 64.4
+  },
+  "correct": true
+}

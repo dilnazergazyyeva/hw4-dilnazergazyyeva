@@ -1,0 +1,66 @@
+{
+  "samples": [
+    {
+      "raw": "Brightwater used 3,315 megalitres, while Millbrook used 2,806 megalitres. The difference is 509 megalitres, or 509,000 cubic metres.\n\nAt 142.35 tenge per cubic metre:\n\n509,000 × 142.35 = 72,455,? Wait calculation: 142.35 × 509,000 = 72,? 142.35 × 509 = 72,? 142.35×500=71,175; ×9=1,281.15; total 72,456.15 thousand tenge = 72.45615 million tenge, rounded to 72.46 million tenge.\n\nANSWER: Brightwater | 72.46",
+      "parsed": [
+        "brightwater",
+        72.46
+      ]
+    },
+    {
+      "raw": "Brightwater used 3,315 megalitres, while Millbrook used 2,806 megalitres. The difference is 509 megalitres, or 509,000 cubic metres.\n\nAt 142.35 tenge per cubic metre:\n\n509,000 × 142.35 = 72,? Wait, calculate: 142.35 × 509,000 = 72,? 142.35 × 509 = 72,? 142.35×500=71,175; ×9=1,281.15; total 72,456.15 thousand tenge = 72.45615 million tenge, rounded to 72.46 million tenge.\n\nANSWER: Brightwater | 72.46",
+      "parsed": [
+        "brightwater",
+        72.46
+      ]
+    },
+    {
+      "raw": "Brightwater households used 3,315 megalitres, while Millbrook households used 2,806 megalitres. The difference is 509 megalitres, or 509,000 cubic metres. At 142.35 tenge per cubic metre:\n\n509,000 × 142.35 = 72,? 509 × 142.35 = 72,? = 72,? Let's calculate: 142.35 × 500 = 71,175; ×9 = 1,281.15; total 72,456.15 thousand tenge = 72.45615 million tenge, rounded to 72.46 million tenge.\n\nANSWER: Brightwater | 72.46",
+      "parsed": [
+        "brightwater",
+        72.46
+      ]
+    },
+    {
+      "raw": "Brightwater used 3,315 megalitres, while Millbrook used 2,806 megalitres. The difference is 509,000 cubic metres. At 142.35 tenge per cubic metre:\n\n509,000 × 142.35 = 72,456,150 tenge = 72.46 million tenge.\n\nANSWER: Brightwater | 72.46",
+      "parsed": [
+        "brightwater",
+        72.46
+      ]
+    },
+    {
+      "raw": "Millbrook’s households used 2,806 megalitres, while Brightwater’s used 3,315 megalitres. The difference is 509 megalitres = 509,000 cubic metres.\n\nAt 142.35 tenge per cubic metre:\n\n509,000 × 142.35 = 72,456,150 tenge = 72.46 million tenge.\n\nBrightwater paid more.\n\nANSWER: Brightwater | 72.46",
+      "parsed": [
+        "brightwater",
+        72.46
+      ]
+    }
+  ],
+  "votes": [
+    [
+      [
+        "brightwater",
+        72.46
+      ],
+      5
+    ]
+  ],
+  "parsed": [
+    "brightwater",
+    72.46
+  ],
+  "usage": {
+    "calls": 5,
+    "input_tokens": 11120,
+    "output_tokens": 656
+  },
+  "unanswered": false,
+  "temperature_used": 1.0,
+  "seconds": 9.283,
+  "id": "Q-08",
+  "expected": {
+    "answer": "Brightwater",
+    "value": 72.46
+  },
+  "correct": true
+}

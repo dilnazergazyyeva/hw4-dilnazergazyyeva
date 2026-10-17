@@ -1,0 +1,20 @@
+{
+  "raw": "Ossford has the higher 2025 population density.\n\nOssbridge: 52,904 ÷ 1,284.6 = 41.2 residents/km²  \nOssford: 30,982 ÷ 846.2 = 36.6 residents/km²  \n\nDifference: 4.6 residents/km²\n\nANSWER: Ossford | 4.6",
+  "parsed": [
+    "ossford",
+    4.6
+  ],
+  "usage": {
+    "calls": 1,
+    "input_tokens": 2208,
+    "output_tokens": 82
+  },
+  "unanswered": false,
+  "seconds": 3.807,
+  "id": "Q-01",
+  "expected": {
+    "answer": "Ossbridge",
+    "value": 4.6
+  },
+  "correct": false
+}

@@ -1,0 +1,66 @@
+{
+  "samples": [
+    {
+      "raw": "Stonecairn was founded in 1837, while Coldharbour was founded in 1845. Therefore, Stonecairn is 8 years older.\n\nANSWER: Stonecairn | 8",
+      "parsed": [
+        "stonecairn",
+        8.0
+      ]
+    },
+    {
+      "raw": "Stonecairn was founded in 1837, while Coldharbour was founded in 1845. Therefore, Stonecairn is 8 years older.\n\nANSWER: Stonecairn | 8",
+      "parsed": [
+        "stonecairn",
+        8.0
+      ]
+    },
+    {
+      "raw": "Stonecairn was founded in 1837, while Coldharbour was founded in 1845. Therefore, Stonecairn is 8 years older.\n\nANSWER: Stonecairn | 8",
+      "parsed": [
+        "stonecairn",
+        8.0
+      ]
+    },
+    {
+      "raw": "Stonecairn was founded in 1837, while Coldharbour was founded in 1845. Stonecairn is 8 years older.\n\nANSWER: Stonecairn | 8",
+      "parsed": [
+        "stonecairn",
+        8.0
+      ]
+    },
+    {
+      "raw": "Stonecairn was founded in 1837, while Coldharbour was founded in 1845. Therefore, Stonecairn is 8 years older.\n\nANSWER: Stonecairn | 8",
+      "parsed": [
+        "stonecairn",
+        8.0
+      ]
+    }
+  ],
+  "votes": [
+    [
+      [
+        "stonecairn",
+        8.0
+      ],
+      5
+    ]
+  ],
+  "parsed": [
+    "stonecairn",
+    8.0
+  ],
+  "usage": {
+    "calls": 5,
+    "input_tokens": 11065,
+    "output_tokens": 228
+  },
+  "unanswered": false,
+  "temperature_used": 1.0,
+  "seconds": 7.566,
+  "id": "Q-10",
+  "expected": {
+    "answer": "Stonecairn",
+    "value": 8
+  },
+  "correct": true
+}

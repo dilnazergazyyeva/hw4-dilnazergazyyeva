@@ -1,13 +1,13 @@
 {
   "run": 1,
   "strategy": "s1",
-  "correct": 1,
-  "n": 1,
+  "correct": 16,
+  "n": 20,
   "unanswered": 0,
-  "input_tokens": 2208,
-  "output_tokens": 71,
-  "median_seconds": 4.37,
-  "total_seconds": 4.4,
-  "cost_usd": 0.0005,
+  "input_tokens": 44279,
+  "output_tokens": 1772,
+  "median_seconds": 1.67,
+  "total_seconds": 34.7,
+  "cost_usd": 0.011,
   "temperature_rejected_by_model": false
 }

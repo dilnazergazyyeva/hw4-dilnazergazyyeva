@@ -1,0 +1,20 @@
+{
+  "raw": "Lindenmoor: 402.3 ÷ 1,015.7 = 0.396 km/km².  \nRedfen: 244.6 ÷ 677.1 = 0.361 km/km².  \nDifference: 0.035 km/km².\n\nANSWER: Lindenmoor | 0.035",
+  "parsed": [
+    "lindenmoor",
+    0.035
+  ],
+  "usage": {
+    "calls": 1,
+    "input_tokens": 2208,
+    "output_tokens": 71
+  },
+  "unanswered": false,
+  "seconds": 1.347,
+  "id": "Q-19",
+  "expected": {
+    "answer": "Lindenmoor",
+    "value": 0.035
+  },
+  "correct": true
+}

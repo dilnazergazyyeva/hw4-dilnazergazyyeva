@@ -1,0 +1,66 @@
+{
+  "samples": [
+    {
+      "raw": "Tarnvale grew by \\((71,388-67,214)/67,214 \\times 100 = 6.21\\%\\).\n\nHarrowfield grew by \\((90,212-83,609)/83,609 \\times 100 = 7.90\\%\\).\n\nHarrowfield grew faster by \\(7.90-6.21 = 1.69\\) percentage points.\n\nANSWER: Harrowfield | 1.69",
+      "parsed": [
+        "harrowfield",
+        1.69
+      ]
+    },
+    {
+      "raw": "Tarnvale grew by \\((71,388 - 67,214) / 67,214 \\times 100 = 6.21\\%\\).\n\nHarrowfield grew by \\((90,212 - 83,609) / 83,609 \\times 100 = 7.90\\%\\).\n\nThe difference is \\(7.90 - 6.21 = 1.69\\) percentage points.\n\nANSWER: Harrowfield | 1.69",
+      "parsed": [
+        "harrowfield",
+        1.69
+      ]
+    },
+    {
+      "raw": "Tarnvale grew by \\(4,174 / 67,214 \\times 100 = 6.21\\%\\).\n\nHarrowfield grew by \\(6,603 / 83,609 \\times 100 = 7.90\\%\\).\n\nHarrowfield grew faster by \\(7.90 - 6.21 = 1.69\\) percentage points.\n\nANSWER: Harrowfield | 1.69",
+      "parsed": [
+        "harrowfield",
+        1.69
+      ]
+    },
+    {
+      "raw": "Tarnvale grew by \\((71,388-67,214)/67,214 \\times 100 = 6.21\\%\\).\n\nHarrowfield grew by \\((90,212-83,609)/83,609 \\times 100 = 7.90\\%\\).\n\nHarrowfield grew faster by \\(7.90-6.21 = 1.69\\) percentage points.\n\nANSWER: Harrowfield | 1.69",
+      "parsed": [
+        "harrowfield",
+        1.69
+      ]
+    },
+    {
+      "raw": "Tarnvale grew by \\((71,388 - 67,214) / 67,214 \\times 100 = 6.21\\%\\).\n\nHarrowfield grew by \\((90,212 - 83,609) / 83,609 \\times 100 = 7.90\\%\\).\n\nHarrowfield grew faster by \\(7.90 - 6.21 = 1.69\\) percentage points.\n\nANSWER: Harrowfield | 1.69",
+      "parsed": [
+        "harrowfield",
+        1.69
+      ]
+    }
+  ],
+  "votes": [
+    [
+      [
+        "harrowfield",
+        1.69
+      ],
+      5
+    ]
+  ],
+  "parsed": [
+    "harrowfield",
+    1.69
+  ],
+  "usage": {
+    "calls": 5,
+    "input_tokens": 11110,
+    "output_tokens": 489
+  },
+  "unanswered": false,
+  "temperature_used": 1.0,
+  "seconds": 7.668,
+  "id": "Q-02",
+  "expected": {
+    "answer": "Harrowfield",
+    "value": 1.69
+  },
+  "correct": true
+}

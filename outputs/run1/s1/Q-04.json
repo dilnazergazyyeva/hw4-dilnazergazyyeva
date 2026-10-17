@@ -1,0 +1,20 @@
+{
+  "raw": "Ashgrove: 8,837 ÷ 24 = 368.21 pupils per school.  \nMillbrook: 5,562 ÷ 15 = 370.80 pupils per school.  \nMillbrook has 2.59 more pupils per school.\n\nANSWER: Millbrook | 2.59",
+  "parsed": [
+    "millbrook",
+    2.59
+  ],
+  "usage": {
+    "calls": 1,
+    "input_tokens": 2209,
+    "output_tokens": 67
+  },
+  "unanswered": false,
+  "seconds": 1.446,
+  "id": "Q-04",
+  "expected": {
+    "answer": "Millbrook",
+    "value": 2.59
+  },
+  "correct": true
+}

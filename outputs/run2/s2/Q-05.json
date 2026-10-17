@@ -1,0 +1,94 @@
+{
+  "samples": [
+    {
+      "raw": "Stonecairn: 2,884.6 million ÷ 14,926 ≈ 193,180 tenge per resident.  \nColdharbour: 2,366.9 million ÷ 11,407 ≈ 207,513 tenge per resident.  \n\nColdharbour had the larger budget per resident by approximately 14,333 tenge.\n\nANSWER: Coldharbour | 14333",
+      "parsed": [
+        "coldharbour",
+        14333.0
+      ]
+    },
+    {
+      "raw": "Stonecairn: 2,884.6 million ÷ 14,926 = 193,163 tenge per resident.  \nColdharbour: 2,366.9 million ÷ 11,407 = 207,510 tenge per resident.  \n\nColdharbour had the larger budget per resident by 14,347 tenge.\n\nANSWER: Coldharbour | 14347",
+      "parsed": [
+        "coldharbour",
+        14347.0
+      ]
+    },
+    {
+      "raw": "Stonecairn: 2,884.6 million tenge ÷ 14,926 residents ≈ 193,165 tenge per resident.\n\nColdharbour: 2,366.9 million tenge ÷ 11,407 residents ≈ 207,517 tenge per resident.\n\nColdharbour had the larger budget per resident by approximately 14,352 tenge.\n\nANSWER: Coldharbour | 14352",
+      "parsed": [
+        "coldharbour",
+        14352.0
+      ]
+    },
+    {
+      "raw": "Stonecairn: 2,884.6 million ÷ 14,926 = 193,160 tenge per resident.  \nColdharbour: 2,366.9 million ÷ 11,407 = 207,500 tenge per resident.  \n\nColdharbour had the larger budget per resident by 14,340 tenge.\n\nANSWER: Coldharbour | 14340",
+      "parsed": [
+        "coldharbour",
+        14340.0
+      ]
+    },
+    {
+      "raw": "Stonecairn: 2,884.6 million ÷ 14,926 ≈ 193,225 tenge per resident.  \nColdharbour: 2,366.9 million ÷ 11,407 ≈ 207,507 tenge per resident.  \n\nColdharbour had the larger budget per resident by approximately 14,282 tenge.\n\nANSWER: Coldharbour | 14282",
+      "parsed": [
+        "coldharbour",
+        14282.0
+      ]
+    }
+  ],
+  "votes": [
+    [
+      [
+        "coldharbour",
+        14333.0
+      ],
+      1
+    ],
+    [
+      [
+        "coldharbour",
+        14347.0
+      ],
+      1
+    ],
+    [
+      [
+        "coldharbour",
+        14352.0
+      ],
+      1
+    ],
+    [
+      [
+        "coldharbour",
+        14340.0
+      ],
+      1
+    ],
+    [
+      [
+        "coldharbour",
+        14282.0
+      ],
+      1
+    ]
+  ],
+  "parsed": [
+    "coldharbour",
+    14333.0
+  ],
+  "usage": {
+    "calls": 5,
+    "input_tokens": 11090,
+    "output_tokens": 443
+  },
+  "unanswered": false,
+  "temperature_used": 1.0,
+  "seconds": 8.03,
+  "id": "Q-05",
+  "expected": {
+    "answer": "Coldharbour",
+    "value": 14235
+  },
+  "correct": false
+}

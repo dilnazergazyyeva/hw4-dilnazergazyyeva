@@ -1,0 +1,20 @@
+{
+  "raw": "Harrowfield’s households paid more per resident.\n\n- Harrowfield: 7,146 ML × 1,000 × 142.35 ÷ 90,212 = 11,278 tenge per resident\n- Ossbridge: 3,862 ML × 1,000 × 142.35 ÷ 52,904 = 10,391 tenge per resident\n- Difference: 887 tenge per resident\n\nANSWER: Harrowfield | 887",
+  "parsed": [
+    "harrowfield",
+    887.0
+  ],
+  "usage": {
+    "calls": 1,
+    "input_tokens": 2220,
+    "output_tokens": 102
+  },
+  "unanswered": false,
+  "seconds": 2.168,
+  "id": "Q-17",
+  "expected": {
+    "answer": "Harrowfield",
+    "value": 884
+  },
+  "correct": false
+}

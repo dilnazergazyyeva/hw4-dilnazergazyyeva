@@ -1,0 +1,80 @@
+{
+  "raw": "Lindenmoor used more water per resident per day, by 5.3 litres.\n\nANSWER: Lindenmoor | 5.3",
+  "parsed": [
+    "lindenmoor",
+    5.3
+  ],
+  "usage": {
+    "calls": 4,
+    "input_tokens": 3622,
+    "output_tokens": 239
+  },
+  "rounds": 4,
+  "tool_calls": [
+    {
+      "round": 1,
+      "id": "call_Q4FeWPhlxZhatS3tpyWcOVLA",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Lindenmoor\", \"field\": \"water_use_m3\"}",
+      "result": "{\"district\": \"Lindenmoor\", \"field\": \"water_use_m3\", \"value\": 2151400, \"unit\": \"cubic metres, household water use in 2025\", \"source\": \"NR-08\", \"note\": \"this profile publishes water use in cubic metres, not megalitres; value is already in cubic metres\"}",
+      "seconds": 5.4e-05
+    },
+    {
+      "round": 1,
+      "id": "call_BwDzV24Yrs2Bh43FO2cTeUU0",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Lindenmoor\", \"field\": \"population_2025\"}",
+      "result": "{\"district\": \"Lindenmoor\", \"field\": \"population_2025\", \"value\": 29051, \"unit\": \"residents, 2025 census\", \"source\": \"NR-08\"}",
+      "seconds": 3e-05
+    },
+    {
+      "round": 1,
+      "id": "call_sSHNsW1J0cRkSEYw7wUTHjt8",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Kelmarsh\", \"field\": \"water_use_m3\"}",
+      "result": "{\"district\": \"Kelmarsh\", \"field\": \"water_use_m3\", \"value\": 1739000, \"unit\": \"cubic metres, household water use in 2025\", \"source\": \"NR-04\"}",
+      "seconds": 2.4e-05
+    },
+    {
+      "round": 1,
+      "id": "call_Ql3zLXTJu7l2qwPghylX2nXL",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Kelmarsh\", \"field\": \"population_2025\"}",
+      "result": "{\"district\": \"Kelmarsh\", \"field\": \"population_2025\", \"value\": 24117, \"unit\": \"residents, 2025 census\", \"source\": \"NR-04\"}",
+      "seconds": 2e-05
+    },
+    {
+      "round": 2,
+      "id": "call_0SmjL9Gy33RlGKECcDLyxNP4",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"2151400 / 29051 / 365 * 1000\"}",
+      "result": "{\"expression\": \"2151400 / 29051 / 365 * 1000\", \"result\": 202.89306995774555}",
+      "seconds": 0.000126
+    },
+    {
+      "round": 2,
+      "id": "call_ruOz13Mj4yhFnIo1QUq4V3yf",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"1739000 / 24117 / 365 * 1000\"}",
+      "result": "{\"expression\": \"1739000 / 24117 / 365 * 1000\", \"result\": 197.55291129260834}",
+      "seconds": 5.9e-05
+    },
+    {
+      "round": 3,
+      "id": "call_78qoRi6DbmmG0KOUMvCRvPnE",
+      "tool": "calculate",
+      "arguments": "{\"expression\":\"202.89306995774555 - 197.55291129260834\"}",
+      "result": "{\"expression\": \"202.89306995774555 - 197.55291129260834\", \"result\": 5.34015866513721}",
+      "seconds": 8.4e-05
+    }
+  ],
+  "hit_round_limit": false,
+  "unanswered": false,
+  "seconds": 5.565,
+  "id": "Q-03",
+  "expected": {
+    "answer": "Lindenmoor",
+    "value": 5.3
+  },
+  "correct": true
+}

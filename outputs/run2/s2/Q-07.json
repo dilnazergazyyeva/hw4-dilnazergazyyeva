@@ -1,0 +1,73 @@
+{
+  "samples": [
+    {
+      "raw": "Coldharbour: \\(598.3 \\div 11,407 \\times 1,000 = 52.45\\) km per 1,000 residents.\n\nStonecairn: \\(506.8 \\div 14,926 \\times 1,000 = 33.96\\) km per 1,000 residents.\n\nDifference: \\(52.45 - 33.96 = 18.49\\) km per 1,000 residents.\n\nANSWER: Coldharbour | 18.49",
+      "parsed": [
+        "coldharbour",
+        18.49
+      ]
+    },
+    {
+      "raw": "Coldharbour: \\(598.3 \\div 11,407 \\times 1,000 = 52.45\\) km per 1,000 residents.\n\nStonecairn: \\(506.8 \\div 14,926 \\times 1,000 = 33.96\\) km per 1,000 residents.\n\nDifference: \\(52.45 - 33.96 = 18.49\\) km per 1,000 residents.\n\nANSWER: Coldharbour | 18.49",
+      "parsed": [
+        "coldharbour",
+        18.49
+      ]
+    },
+    {
+      "raw": "Coldharbour: \\(598.3 / 11,407 \\times 1,000 = 52.45\\) km per 1,000 residents.\n\nStonecairn: \\(506.8 / 14,926 \\times 1,000 = 33.97\\) km per 1,000 residents.\n\nColdharbour has more by \\(52.45 - 33.97 = 18.48\\) km per 1,000 residents.\n\nANSWER: Coldharbour | 18.48",
+      "parsed": [
+        "coldharbour",
+        18.48
+      ]
+    },
+    {
+      "raw": "Coldharbour: \\(598.3 \\div 11,407 \\times 1,000 = 52.45\\) km per 1,000 residents.\n\nStonecairn: \\(506.8 \\div 14,926 \\times 1,000 = 33.96\\) km per 1,000 residents.\n\nDifference: \\(52.45 - 33.96 = 18.49\\) km per 1,000 residents.\n\nANSWER: Coldharbour | 18.49",
+      "parsed": [
+        "coldharbour",
+        18.49
+      ]
+    },
+    {
+      "raw": "Coldharbour: \\(598.3 / 11,407 \\times 1,000 = 52.45\\) km per 1,000 residents.\n\nStonecairn: \\(506.8 / 14,926 \\times 1,000 = 33.96\\) km per 1,000 residents.\n\nColdharbour has more by \\(52.45 - 33.96 = 18.49\\) km per 1,000 residents.\n\nANSWER: Coldharbour | 18.49",
+      "parsed": [
+        "coldharbour",
+        18.49
+      ]
+    }
+  ],
+  "votes": [
+    [
+      [
+        "coldharbour",
+        18.49
+      ],
+      4
+    ],
+    [
+      [
+        "coldharbour",
+        18.48
+      ],
+      1
+    ]
+  ],
+  "parsed": [
+    "coldharbour",
+    18.49
+  ],
+  "usage": {
+    "calls": 5,
+    "input_tokens": 11130,
+    "output_tokens": 554
+  },
+  "unanswered": false,
+  "temperature_used": 1.0,
+  "seconds": 7.717,
+  "id": "Q-07",
+  "expected": {
+    "answer": "Coldharbour",
+    "value": 18.5
+  },
+  "correct": true
+}

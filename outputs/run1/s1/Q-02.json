@@ -1,0 +1,20 @@
+{
+  "raw": "Tarnvale grew by \\((71,388 - 67,214) / 67,214 \\times 100 = 6.21\\%\\).\n\nHarrowfield grew by \\((90,212 - 83,609) / 83,609 \\times 100 = 7.90\\%\\).\n\nHarrowfield grew faster by 1.69 percentage points.\n\nANSWER: Harrowfield | 1.69",
+  "parsed": [
+    "harrowfield",
+    1.69
+  ],
+  "usage": {
+    "calls": 1,
+    "input_tokens": 2214,
+    "output_tokens": 92
+  },
+  "unanswered": false,
+  "seconds": 1.715,
+  "id": "Q-02",
+  "expected": {
+    "answer": "Harrowfield",
+    "value": 1.69
+  },
+  "correct": true
+}

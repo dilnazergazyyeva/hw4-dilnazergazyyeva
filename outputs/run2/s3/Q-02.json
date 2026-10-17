@@ -1,0 +1,80 @@
+{
+  "raw": "Harrowfield grew faster by 1.69 percentage points.\n\nANSWER: Harrowfield | 1.69",
+  "parsed": [
+    "harrowfield",
+    1.69
+  ],
+  "usage": {
+    "calls": 4,
+    "input_tokens": 3523,
+    "output_tokens": 238
+  },
+  "rounds": 4,
+  "tool_calls": [
+    {
+      "round": 1,
+      "id": "call_HG3eSmGyR5nipwOalgnGCrrk",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Tarnvale\", \"field\": \"population_2020\"}",
+      "result": "{\"district\": \"Tarnvale\", \"field\": \"population_2020\", \"value\": 67214, \"unit\": \"residents, 2020 census\", \"source\": \"NR-03\"}",
+      "seconds": 5e-05
+    },
+    {
+      "round": 1,
+      "id": "call_2EbdJpLm7X2WskbSVrTGSZp3",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Tarnvale\", \"field\": \"population_2025\"}",
+      "result": "{\"district\": \"Tarnvale\", \"field\": \"population_2025\", \"value\": 71388, \"unit\": \"residents, 2025 census\", \"source\": \"NR-03\"}",
+      "seconds": 2.8e-05
+    },
+    {
+      "round": 1,
+      "id": "call_eGSM5yTLIG4lHYVVJQSNeY6H",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Harrowfield\", \"field\": \"population_2020\"}",
+      "result": "{\"district\": \"Harrowfield\", \"field\": \"population_2020\", \"value\": 83609, \"unit\": \"residents, 2020 census\", \"source\": \"NR-07\"}",
+      "seconds": 2.4e-05
+    },
+    {
+      "round": 1,
+      "id": "call_d2kGSyBW4RMpqEIybic11VqF",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Harrowfield\", \"field\": \"population_2025\"}",
+      "result": "{\"district\": \"Harrowfield\", \"field\": \"population_2025\", \"value\": 90212, \"unit\": \"residents, 2025 census\", \"source\": \"NR-07\"}",
+      "seconds": 2.1e-05
+    },
+    {
+      "round": 2,
+      "id": "call_WXCvWtQI2iYwFDKHMaLCPosU",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"(71388 - 67214) / 67214 * 100\"}",
+      "result": "{\"expression\": \"(71388 - 67214) / 67214 * 100\", \"result\": 6.210015770523998}",
+      "seconds": 0.000101
+    },
+    {
+      "round": 2,
+      "id": "call_mp1CKV01V6QhoRhMyRw4AI6E",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"(90212 - 83609) / 83609 * 100\"}",
+      "result": "{\"expression\": \"(90212 - 83609) / 83609 * 100\", \"result\": 7.8974751521965345}",
+      "seconds": 6e-05
+    },
+    {
+      "round": 3,
+      "id": "call_wF0m87OUOJvdhcHJNjAR4XAw",
+      "tool": "calculate",
+      "arguments": "{\"expression\":\"7.8974751521965345 - 6.210015770523998\"}",
+      "result": "{\"expression\": \"7.8974751521965345 - 6.210015770523998\", \"result\": 1.6874593816725367}",
+      "seconds": 8.6e-05
+    }
+  ],
+  "hit_round_limit": false,
+  "unanswered": false,
+  "seconds": 5.498,
+  "id": "Q-02",
+  "expected": {
+    "answer": "Harrowfield",
+    "value": 1.69
+  },
+  "correct": true
+}

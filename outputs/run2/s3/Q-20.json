@@ -1,0 +1,104 @@
+{
+  "raw": "Ashgrove had the largest 2025 budget per resident, exceeding Ossbridge by 2993 tenge per resident.\n\nANSWER: Ashgrove | 2993",
+  "parsed": [
+    "ashgrove",
+    2993.0
+  ],
+  "usage": {
+    "calls": 4,
+    "input_tokens": 4086,
+    "output_tokens": 316
+  },
+  "rounds": 4,
+  "tool_calls": [
+    {
+      "round": 1,
+      "id": "call_cOun4uLeHF5gD0RwrE8KVmel",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Ossbridge\", \"field\": \"budget_million_tenge\"}",
+      "result": "{\"district\": \"Ossbridge\", \"field\": \"budget_million_tenge\", \"value\": 9284.5, \"unit\": \"million tenge, 2025 budget\", \"source\": \"NR-01\"}",
+      "seconds": 6.1e-05
+    },
+    {
+      "round": 1,
+      "id": "call_yy8guy2Omt3lzTcmxjTvVOh0",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Ossbridge\", \"field\": \"population_2025\"}",
+      "result": "{\"district\": \"Ossbridge\", \"field\": \"population_2025\", \"value\": 52904, \"unit\": \"residents, 2025 census\", \"source\": \"NR-01\"}",
+      "seconds": 4.2e-05
+    },
+    {
+      "round": 1,
+      "id": "call_GEAONMOsKcfNLVmUW4ySSUm7",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Ashgrove\", \"field\": \"budget_million_tenge\"}",
+      "result": "{\"district\": \"Ashgrove\", \"field\": \"budget_million_tenge\", \"value\": 10488.1, \"unit\": \"million tenge, 2025 budget\", \"source\": \"NR-10\"}",
+      "seconds": 2.8e-05
+    },
+    {
+      "round": 1,
+      "id": "call_VPpbnpRE5DJoNdE6BLbggN9v",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Ashgrove\", \"field\": \"population_2025\"}",
+      "result": "{\"district\": \"Ashgrove\", \"field\": \"population_2025\", \"value\": 58760, \"unit\": \"residents, 2025 census\", \"source\": \"NR-10\"}",
+      "seconds": 2.3e-05
+    },
+    {
+      "round": 1,
+      "id": "call_9LW7IxCeh4VIgBnNXbbEIcC4",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Harrowfield\", \"field\": \"budget_million_tenge\"}",
+      "result": "{\"district\": \"Harrowfield\", \"field\": \"budget_million_tenge\", \"value\": 16021.7, \"unit\": \"million tenge, 2025 budget\", \"source\": \"NR-07\"}",
+      "seconds": 2e-05
+    },
+    {
+      "round": 1,
+      "id": "call_WKMFpTDVxmPJkyCXpUGG100g",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Harrowfield\", \"field\": \"population_2025\"}",
+      "result": "{\"district\": \"Harrowfield\", \"field\": \"population_2025\", \"value\": 90212, \"unit\": \"residents, 2025 census\", \"source\": \"NR-07\"}",
+      "seconds": 1.8e-05
+    },
+    {
+      "round": 2,
+      "id": "call_QapbB6ezDyUCIFMXTR6g79fI",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"9284.5 * 1000000 / 52904\"}",
+      "result": "{\"expression\": \"9284.5 * 1000000 / 52904\", \"result\": 175497.12687131407}",
+      "seconds": 0.000157
+    },
+    {
+      "round": 2,
+      "id": "call_09GLkfOzJmNFFjHuvnzMWr0z",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"10488.1 * 1000000 / 58760\"}",
+      "result": "{\"expression\": \"10488.1 * 1000000 / 58760\", \"result\": 178490.46970728386}",
+      "seconds": 0.000102
+    },
+    {
+      "round": 2,
+      "id": "call_eFr5GR5MMmxeahweVA4hfLA3",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"16021.7 * 1000000 / 90212\"}",
+      "result": "{\"expression\": \"16021.7 * 1000000 / 90212\", \"result\": 177600.54094798918}",
+      "seconds": 9.7e-05
+    },
+    {
+      "round": 3,
+      "id": "call_TGliQ8ySjcooy5ijf5u7ITRt",
+      "tool": "calculate",
+      "arguments": "{\"expression\":\"178490.46970728386 - 175497.12687131407\"}",
+      "result": "{\"expression\": \"178490.46970728386 - 175497.12687131407\", \"result\": 2993.3428359697864}",
+      "seconds": 8.6e-05
+    }
+  ],
+  "hit_round_limit": false,
+  "unanswered": false,
+  "seconds": 6.173,
+  "id": "Q-20",
+  "expected": {
+    "answer": "Ashgrove",
+    "value": 2993
+  },
+  "correct": true
+}

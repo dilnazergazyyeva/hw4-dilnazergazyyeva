@@ -1,0 +1,80 @@
+{
+  "raw": "Coldharbour had the larger 2025 budget per resident, by 14235 tenge per resident.\n\nANSWER: Coldharbour | 14235",
+  "parsed": [
+    "coldharbour",
+    14235.0
+  ],
+  "usage": {
+    "calls": 4,
+    "input_tokens": 3556,
+    "output_tokens": 257
+  },
+  "rounds": 4,
+  "tool_calls": [
+    {
+      "round": 1,
+      "id": "call_98v7teLISb0iUePD8Ye6qm89",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Stonecairn\", \"field\": \"budget_million_tenge\"}",
+      "result": "{\"district\": \"Stonecairn\", \"field\": \"budget_million_tenge\", \"value\": 2884.6, \"unit\": \"million tenge, 2025 budget\", \"source\": \"NR-06\"}",
+      "seconds": 4.9e-05
+    },
+    {
+      "round": 1,
+      "id": "call_9M85tvZVqZHoVam52c7zddBF",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Stonecairn\", \"field\": \"population_2025\"}",
+      "result": "{\"district\": \"Stonecairn\", \"field\": \"population_2025\", \"value\": 14926, \"unit\": \"residents, 2025 census\", \"source\": \"NR-06\"}",
+      "seconds": 2.8e-05
+    },
+    {
+      "round": 1,
+      "id": "call_qeRRhsERNkcVPN0tRYokArfc",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Coldharbour\", \"field\": \"budget_million_tenge\"}",
+      "result": "{\"district\": \"Coldharbour\", \"field\": \"budget_million_tenge\", \"value\": 2366.9, \"unit\": \"million tenge, 2025 budget\", \"source\": \"NR-12\"}",
+      "seconds": 2.5e-05
+    },
+    {
+      "round": 1,
+      "id": "call_qPvSAKDtZsZdFgnXevIZltlt",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Coldharbour\", \"field\": \"population_2025\"}",
+      "result": "{\"district\": \"Coldharbour\", \"field\": \"population_2025\", \"value\": 11407, \"unit\": \"residents, 2025 census\", \"source\": \"NR-12\"}",
+      "seconds": 2e-05
+    },
+    {
+      "round": 2,
+      "id": "call_23Myv7BpP8KVZzWTBuP7Mxw1",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"2884.6 * 1000000 / 14926\"}",
+      "result": "{\"expression\": \"2884.6 * 1000000 / 14926\", \"result\": 193260.08307651078}",
+      "seconds": 9e-05
+    },
+    {
+      "round": 2,
+      "id": "call_4Pz8ck6jNqG3weZOOpbnOikG",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"2366.9 * 1000000 / 11407\"}",
+      "result": "{\"expression\": \"2366.9 * 1000000 / 11407\", \"result\": 207495.39756289998}",
+      "seconds": 5.9e-05
+    },
+    {
+      "round": 3,
+      "id": "call_kGlYcxMfmxeD4AD3VYo99CNO",
+      "tool": "calculate",
+      "arguments": "{\"expression\":\"2366.9 * 1000000 / 11407 - 2884.6 * 1000000 / 14926\"}",
+      "result": "{\"expression\": \"2366.9 * 1000000 / 11407 - 2884.6 * 1000000 / 14926\", \"result\": 14235.314486389194}",
+      "seconds": 0.000106
+    }
+  ],
+  "hit_round_limit": false,
+  "unanswered": false,
+  "seconds": 5.923,
+  "id": "Q-05",
+  "expected": {
+    "answer": "Coldharbour",
+    "value": 14235
+  },
+  "correct": true
+}

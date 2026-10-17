@@ -1,0 +1,87 @@
+{
+  "samples": [
+    {
+      "raw": "Harrowfield’s households used 7,146 megalitres for 90,212 residents, while Ossbridge’s used 3,862 megalitres for 52,904 residents. Applying the same tariff, Harrowfield paid approximately 16 tenge more per resident.\n\nANSWER: Harrowfield | 16",
+      "parsed": [
+        "harrowfield",
+        16.0
+      ]
+    },
+    {
+      "raw": "Harrowfield used 7,146 megalitres for 90,212 residents, while Ossbridge used 3,862 megalitres for 52,904 residents. At 142.35 tenge per cubic metre, Harrowfield’s per-resident cost was higher by approximately 218 tenge.\n\nANSWER: Harrowfield | 218",
+      "parsed": [
+        "harrowfield",
+        218.0
+      ]
+    },
+    {
+      "raw": "Harrowfield’s per-resident water cost is:\n\n- Harrowfield: 7,146 ML × 1,000 × 142.35 ÷ 90,212 ≈ 11,276 tenge\n- Ossbridge: 3,862 ML × 1,000 × 142.35 ÷ 52,904 ≈ 10,390 tenge\n\nDifference: approximately 886 tenge per resident.\n\nANSWER: Harrowfield | 886",
+      "parsed": [
+        "harrowfield",
+        886.0
+      ]
+    },
+    {
+      "raw": "Harrowfield used 7,146 megalitres for 90,212 residents; Ossbridge used 3,862 megalitres for 52,904 residents.\n\nAt 142.35 tenge per cubic metre:\n\n- Harrowfield: approximately 11,281 tenge per resident\n- Ossbridge: approximately 10,391 tenge per resident\n- Difference: approximately 890 tenge per resident\n\nANSWER: Harrowfield | 890",
+      "parsed": [
+        "harrowfield",
+        890.0
+      ]
+    },
+    {
+      "raw": "Harrowfield households used 7,146 megalitres, or 7,146,000 cubic metres. At 142.35 tenge per cubic metre, that is 1,017,233,100 tenge, or 11,276.92 tenge per resident.\n\nOssbridge households used 3,862 megalitres, or 3,862,000 cubic metres. This cost 549,761,700 tenge, or 10,391.32 tenge per resident.\n\nHarrowfield paid 885.60 more per resident, which rounds to 886 tenge.\n\nANSWER: Harrowfield | 886",
+      "parsed": [
+        "harrowfield",
+        886.0
+      ]
+    }
+  ],
+  "votes": [
+    [
+      [
+        "harrowfield",
+        886.0
+      ],
+      2
+    ],
+    [
+      [
+        "harrowfield",
+        16.0
+      ],
+      1
+    ],
+    [
+      [
+        "harrowfield",
+        218.0
+      ],
+      1
+    ],
+    [
+      [
+        "harrowfield",
+        890.0
+      ],
+      1
+    ]
+  ],
+  "parsed": [
+    "harrowfield",
+    886.0
+  ],
+  "usage": {
+    "calls": 5,
+    "input_tokens": 11140,
+    "output_tokens": 485
+  },
+  "unanswered": false,
+  "temperature_used": 1.0,
+  "seconds": 7.966,
+  "id": "Q-17",
+  "expected": {
+    "answer": "Harrowfield",
+    "value": 884
+  },
+  "correct": false
+}

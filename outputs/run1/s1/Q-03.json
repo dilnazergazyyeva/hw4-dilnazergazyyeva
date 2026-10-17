@@ -1,0 +1,20 @@
+{
+  "raw": "Lindenmoor used 2,151,400 cubic metres, or 2,151,400,000 litres. Kelmarsh used 1,739 megalitres, or 1,739,000,000 litres.\n\nUsing 2025 populations and 365 days:\n- Lindenmoor: 2,151,400,000 ÷ 29,051 ÷ 365 = 202.9 litres per resident per day\n- Kelmarsh: 1,739,000,000 ÷ 24,117 ÷ 365 = 197.6 litres per resident per day\n\nThe difference is 5.3 litres per resident per day.\n\nANSWER: Lindenmoor | 5.3",
+  "parsed": [
+    "lindenmoor",
+    5.3
+  ],
+  "usage": {
+    "calls": 1,
+    "input_tokens": 2214,
+    "output_tokens": 150
+  },
+  "unanswered": false,
+  "seconds": 1.974,
+  "id": "Q-03",
+  "expected": {
+    "answer": "Lindenmoor",
+    "value": 5.3
+  },
+  "correct": true
+}

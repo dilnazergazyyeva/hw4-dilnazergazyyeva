@@ -1,0 +1,66 @@
+{
+  "samples": [
+    {
+      "raw": "Redfen: 3,147 ÷ 10 = 314.70 pupils per school  \nAshgrove: 8,837 ÷ 24 = 368.21 pupils per school  \nMillbrook: 5,562 ÷ 15 = 370.80 pupils per school  \n\nMillbrook has the highest figure, and Redfen the lowest. The difference is 370.80 − 314.70 = 56.10 pupils per school.\n\nANSWER: Redfen | 56.10",
+      "parsed": [
+        "redfen",
+        56.1
+      ]
+    },
+    {
+      "raw": "Redfen: 3,147 ÷ 10 = 314.70 pupils per school  \nAshgrove: 8,837 ÷ 24 = 368.21 pupils per school  \nMillbrook: 5,562 ÷ 15 = 370.80 pupils per school  \n\nThe difference between the highest and lowest is 370.80 − 314.70 = 56.10.\n\nANSWER: Redfen | 56.10",
+      "parsed": [
+        "redfen",
+        56.1
+      ]
+    },
+    {
+      "raw": "Redfen: 3,147 ÷ 10 = 314.70 pupils per school  \nAshgrove: 8,837 ÷ 24 = 368.21 pupils per school  \nMillbrook: 5,562 ÷ 15 = 370.80 pupils per school  \n\nThe difference between the highest and lowest is 370.80 − 314.70 = 56.10.\n\nANSWER: Redfen | 56.10",
+      "parsed": [
+        "redfen",
+        56.1
+      ]
+    },
+    {
+      "raw": "Redfen: 3,147 ÷ 10 = 314.70 pupils per school  \nAshgrove: 8,837 ÷ 24 = 368.21 pupils per school  \nMillbrook: 5,562 ÷ 15 = 370.80 pupils per school  \n\nThe difference between the highest and lowest is 370.80 − 314.70 = 56.10.\n\nANSWER: Redfen | 56.10",
+      "parsed": [
+        "redfen",
+        56.1
+      ]
+    },
+    {
+      "raw": "Redfen: 3,147 ÷ 10 = 314.70 pupils per school  \nAshgrove: 8,837 ÷ 24 = 368.21 pupils per school  \nMillbrook: 5,562 ÷ 15 = 370.80 pupils per school  \n\nThe difference between the highest and lowest is 370.80 − 314.70 = 56.10.\n\nANSWER: Redfen | 56.10",
+      "parsed": [
+        "redfen",
+        56.1
+      ]
+    }
+  ],
+  "votes": [
+    [
+      [
+        "redfen",
+        56.1
+      ],
+      5
+    ]
+  ],
+  "parsed": [
+    "redfen",
+    56.1
+  ],
+  "usage": {
+    "calls": 5,
+    "input_tokens": 11155,
+    "output_tokens": 491
+  },
+  "unanswered": false,
+  "temperature_used": 1.0,
+  "seconds": 7.321,
+  "id": "Q-11",
+  "expected": {
+    "answer": "Redfen",
+    "value": 56.1
+  },
+  "correct": true
+}

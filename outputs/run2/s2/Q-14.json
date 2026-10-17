@@ -1,0 +1,87 @@
+{
+  "samples": [
+    {
+      "raw": "Tarnvale used more water per resident per day.\n\n- Tarnvale: 5,207 megalitres ÷ 71,388 residents ÷ 365 days ≈ 199.8 litres per resident per day\n- Ashgrove: 4,390 megalitres ÷ 58,760 residents ÷ 365 days ≈ 204.6 litres per resident per day\n\nAshgrove's rate was higher by 4.8 litres per resident per day.\n\nANSWER: Ashgrove | 4.8",
+      "parsed": [
+        "ashgrove",
+        4.8
+      ]
+    },
+    {
+      "raw": "Tarnvale: 5,207 megalitres ÷ 71,388 residents ÷ 365 × 1,000 = 199.9 litres per resident per day.\n\nAshgrove: 4,390 megalitres ÷ 58,760 residents ÷ 365 × 1,000 = 204.6 litres per resident per day.\n\nAshgrove used 4.7 more litres per resident per day.\n\nANSWER: Ashgrove | 4.7",
+      "parsed": [
+        "ashgrove",
+        4.7
+      ]
+    },
+    {
+      "raw": "Tarnvale used:\n\n- Water: 5,207 megalitres = 5,207,000,000 litres\n- Per resident per day: 5,207,000,000 ÷ 71,388 ÷ 365 ≈ 199.8 litres\n\nAshgrove used:\n\n- Water: 4,390 megalitres = 4,390,000,000 litres\n- Per resident per day: 4,390,000,000 ÷ 58,760 ÷ 365 ≈ 204.6 litres\n\nAshgrove used 4.8 more litres per resident per day.\n\nANSWER: Ashgrove | 4.8",
+      "parsed": [
+        "ashgrove",
+        4.8
+      ]
+    },
+    {
+      "raw": "Tarnvale’s daily household water use per resident:\n\n- Tarnvale: \\(5{,}207{,}000{,}000 \\div 71{,}388 \\div 365 \\approx 199.7\\) litres\n- Ashgrove: \\(4{,}390{,}000{,}000 \\div 58{,}760 \\div 365 \\approx 204.6\\) litres\n\nAshgrove used more by \\(204.6 - 199.7 = 4.9\\) litres per resident per day.\n\nANSWER: Ashgrove | 4.9",
+      "parsed": [
+        "ashgrove",
+        4.9
+      ]
+    },
+    {
+      "raw": "Tarnvale:  \n5,207 megalitres ÷ 71,388 residents ÷ 365 × 1,000 = 0.2 litres per resident per day\n\nAshgrove:  \n4,390 megalitres ÷ 58,760 residents ÷ 365 × 1,000 = 0.2 litres per resident per day\n\nTarnvale used more, by 0.2 litres per resident per day.\n\nANSWER: Tarnvale | 0.2",
+      "parsed": [
+        "tarnvale",
+        0.2
+      ]
+    }
+  ],
+  "votes": [
+    [
+      [
+        "ashgrove",
+        4.8
+      ],
+      2
+    ],
+    [
+      [
+        "ashgrove",
+        4.7
+      ],
+      1
+    ],
+    [
+      [
+        "ashgrove",
+        4.9
+      ],
+      1
+    ],
+    [
+      [
+        "tarnvale",
+        0.2
+      ],
+      1
+    ]
+  ],
+  "parsed": [
+    "ashgrove",
+    4.8
+  ],
+  "usage": {
+    "calls": 5,
+    "input_tokens": 11110,
+    "output_tokens": 607
+  },
+  "unanswered": false,
+  "temperature_used": 1.0,
+  "seconds": 8.911,
+  "id": "Q-14",
+  "expected": {
+    "answer": "Ashgrove",
+    "value": 4.9
+  },
+  "correct": true
+}

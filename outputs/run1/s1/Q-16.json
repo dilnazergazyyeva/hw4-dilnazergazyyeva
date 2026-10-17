@@ -1,0 +1,20 @@
+{
+  "raw": "Ossbridge and Ossford combined: 1,284.6 + 846.2 = 2,130.8 km².  \nTarnvale: 2,106.9 km².  \nThe combined area is larger by 23.9 km².\n\nANSWER: yes | 23.9",
+  "parsed": [
+    "yes",
+    23.9
+  ],
+  "usage": {
+    "calls": 1,
+    "input_tokens": 2208,
+    "output_tokens": 68
+  },
+  "unanswered": false,
+  "seconds": 1.83,
+  "id": "Q-16",
+  "expected": {
+    "answer": "yes",
+    "value": 23.9
+  },
+  "correct": true
+}

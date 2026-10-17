@@ -1,0 +1,73 @@
+{
+  "samples": [
+    {
+      "raw": "Lindenmoor used 2,151,400 cubic metres, equal to 2,151.4 megalitres. Its daily per-resident use was:\n\n2,151,400,000 ÷ 29,051 ÷ 365 = 202.9 litres\n\nKelmarsh used 1,739 megalitres, giving:\n\n1,739,000,000 ÷ 24,117 ÷ 365 = 197.6 litres\n\nLindenmoor’s rate was higher by 5.3 litres per resident per day.\n\nANSWER: Lindenmoor | 5.3",
+      "parsed": [
+        "lindenmoor",
+        5.3
+      ]
+    },
+    {
+      "raw": "Lindenmoor’s water use was 2,151,400 m³, equal to 2,151,400,000 litres. Kelmarsh used 1,739 megalitres, equal to 1,739,000,000 litres.\n\nUsing 365 days:\n\n- Lindenmoor: 2,151,400,000 ÷ 29,051 ÷ 365 ≈ 202.9 litres per resident per day\n- Kelmarsh: 1,739,000,000 ÷ 24,117 ÷ 365 ≈ 197.5 litres per resident per day\n\nLindenmoor used 5.4 more litres per resident per day.\n\nANSWER: Lindenmoor | 5.4",
+      "parsed": [
+        "lindenmoor",
+        5.4
+      ]
+    },
+    {
+      "raw": "Lindenmoor used 2,151,400 cubic metres, or 2,151,400,000 litres, in 2025. Kelmarsh used 1,739 megalitres, or 1,739,000,000 litres.\n\nUsing 365 days:\n\n- Lindenmoor: 2,151,400,000 ÷ 29,051 ÷ 365 = 202.9 litres per resident per day\n- Kelmarsh: 1,739,000,000 ÷ 24,117 ÷ 365 = 197.6 litres per resident per day\n\nThe difference is 5.3 litres per resident per day.\n\nANSWER: Lindenmoor | 5.3",
+      "parsed": [
+        "lindenmoor",
+        5.3
+      ]
+    },
+    {
+      "raw": "Lindenmoor used 2,151,400 cubic metres, equal to 2,151,400,000 litres. Kelmarsh used 1,739 megalitres, equal to 1,739,000,000 litres.\n\nUsing 2025 populations and 365 days:\n\n- Lindenmoor: 2,151,400,000 ÷ 29,051 ÷ 365 = 202.9 litres per resident per day\n- Kelmarsh: 1,739,000,000 ÷ 24,117 ÷ 365 = 197.5 litres per resident per day\n\nLindenmoor used 5.4 more litres per resident per day.\n\nANSWER: Lindenmoor | 5.4",
+      "parsed": [
+        "lindenmoor",
+        5.4
+      ]
+    },
+    {
+      "raw": "Lindenmoor used 2,151,400 cubic metres, or 2,151,400,000 litres. Dividing by 29,051 residents and 365 days gives 202.9 litres per resident per day.\n\nKelmarsh used 1,739,000,000 litres. Dividing by 24,117 residents and 365 days gives 197.5 litres per resident per day.\n\nThe difference was 5.4 litres per resident per day.\n\nANSWER: Lindenmoor | 5.4",
+      "parsed": [
+        "lindenmoor",
+        5.4
+      ]
+    }
+  ],
+  "votes": [
+    [
+      [
+        "lindenmoor",
+        5.4
+      ],
+      3
+    ],
+    [
+      [
+        "lindenmoor",
+        5.3
+      ],
+      2
+    ]
+  ],
+  "parsed": [
+    "lindenmoor",
+    5.4
+  ],
+  "usage": {
+    "calls": 5,
+    "input_tokens": 11110,
+    "output_tokens": 694
+  },
+  "unanswered": false,
+  "temperature_used": 1.0,
+  "seconds": 9.669,
+  "id": "Q-03",
+  "expected": {
+    "answer": "Lindenmoor",
+    "value": 5.3
+  },
+  "correct": true
+}

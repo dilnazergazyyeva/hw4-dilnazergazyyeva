@@ -1,0 +1,73 @@
+{
+  "samples": [
+    {
+      "raw": "Lindenmoor: 402.3 ÷ 1,015.7 = 0.396 km/km².  \nRedfen: 244.6 ÷ 677.1 = 0.361 km/km².  \nDifference: 0.035 km/km².\n\nANSWER: Lindenmoor | 0.035",
+      "parsed": [
+        "lindenmoor",
+        0.035
+      ]
+    },
+    {
+      "raw": "Lindenmoor: 402.3 ÷ 1,015.7 = 0.396 km/km².  \nRedfen: 244.6 ÷ 677.1 = 0.361 km/km².  \nDifference: 0.034 km/km².\n\nANSWER: Lindenmoor | 0.034",
+      "parsed": [
+        "lindenmoor",
+        0.034
+      ]
+    },
+    {
+      "raw": "Lindenmoor: 402.3 ÷ 1,015.7 = 0.396 km/km².  \nRedfen: 244.6 ÷ 677.1 = 0.361 km/km².  \nDifference: 0.035 km/km².\n\nANSWER: Lindenmoor | 0.035",
+      "parsed": [
+        "lindenmoor",
+        0.035
+      ]
+    },
+    {
+      "raw": "Lindenmoor: 402.3 ÷ 1,015.7 = 0.396 km/km².  \nRedfen: 244.6 ÷ 677.1 = 0.361 km/km².  \nDifference: 0.396 − 0.361 = 0.035 km/km².\n\nANSWER: Lindenmoor | 0.035",
+      "parsed": [
+        "lindenmoor",
+        0.035
+      ]
+    },
+    {
+      "raw": "Lindenmoor: 402.3 ÷ 1,015.7 = 0.396 km/km².  \nRedfen: 244.6 ÷ 677.1 = 0.361 km/km².  \nDifference: 0.035 km/km².\n\nANSWER: Lindenmoor | 0.035",
+      "parsed": [
+        "lindenmoor",
+        0.035
+      ]
+    }
+  ],
+  "votes": [
+    [
+      [
+        "lindenmoor",
+        0.035
+      ],
+      4
+    ],
+    [
+      [
+        "lindenmoor",
+        0.034
+      ],
+      1
+    ]
+  ],
+  "parsed": [
+    "lindenmoor",
+    0.035
+  ],
+  "usage": {
+    "calls": 5,
+    "input_tokens": 11080,
+    "output_tokens": 365
+  },
+  "unanswered": false,
+  "temperature_used": 1.0,
+  "seconds": 6.907,
+  "id": "Q-19",
+  "expected": {
+    "answer": "Lindenmoor",
+    "value": 0.035
+  },
+  "correct": true
+}

@@ -1,0 +1,88 @@
+{
+  "raw": "Harrowfield households paid more per resident, by 884 tenge.\n\nANSWER: Harrowfield | 884",
+  "parsed": [
+    "harrowfield",
+    884.0
+  ],
+  "usage": {
+    "calls": 3,
+    "input_tokens": 2703,
+    "output_tokens": 262
+  },
+  "rounds": 3,
+  "tool_calls": [
+    {
+      "round": 1,
+      "id": "call_ZFr3FnzJ2OUKKeDek0jM9oFB",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Harrowfield\", \"field\": \"water_use_m3\"}",
+      "result": "{\"district\": \"Harrowfield\", \"field\": \"water_use_m3\", \"value\": 7146000, \"unit\": \"cubic metres, household water use in 2025\", \"source\": \"NR-07\"}",
+      "seconds": 8.1e-05
+    },
+    {
+      "round": 1,
+      "id": "call_YyDIp66B6CHAmpvkWegp7LOf",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Harrowfield\", \"field\": \"population_2025\"}",
+      "result": "{\"district\": \"Harrowfield\", \"field\": \"population_2025\", \"value\": 90212, \"unit\": \"residents, 2025 census\", \"source\": \"NR-07\"}",
+      "seconds": 4.9e-05
+    },
+    {
+      "round": 1,
+      "id": "call_kJY1zxQySEda9iq2cgiGNPnu",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Ossbridge\", \"field\": \"water_use_m3\"}",
+      "result": "{\"district\": \"Ossbridge\", \"field\": \"water_use_m3\", \"value\": 3862000, \"unit\": \"cubic metres, household water use in 2025\", \"source\": \"NR-01\"}",
+      "seconds": 4.1e-05
+    },
+    {
+      "round": 1,
+      "id": "call_He6XIgOor2acfXT0U7f2fk2k",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Ossbridge\", \"field\": \"population_2025\"}",
+      "result": "{\"district\": \"Ossbridge\", \"field\": \"population_2025\", \"value\": 52904, \"unit\": \"residents, 2025 census\", \"source\": \"NR-01\"}",
+      "seconds": 4.7e-05
+    },
+    {
+      "round": 1,
+      "id": "call_zDrq2xOoFbmbf5vTsWxappye",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"region\", \"field\": \"water_tariff_tenge_per_m3\"}",
+      "result": "{\"district\": \"region\", \"field\": \"water_tariff_tenge_per_m3\", \"value\": 142.35, \"unit\": \"tenge per cubic metre (same in every district; use district='region')\", \"source\": \"NR-15\"}",
+      "seconds": 7.9e-05
+    },
+    {
+      "round": 2,
+      "id": "call_xnl0BPB9ojhtN82YcdglqSUu",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"7146000 / 90212 * 142.35\"}",
+      "result": "{\"expression\": \"7146000 / 90212 * 142.35\", \"result\": 11276.028687979426}",
+      "seconds": 0.000105
+    },
+    {
+      "round": 2,
+      "id": "call_aAC2zOGoLLfdMp2AXC6Mtigz",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"3862000 / 52904 * 142.35\"}",
+      "result": "{\"expression\": \"3862000 / 52904 * 142.35\", \"result\": 10391.571525782549}",
+      "seconds": 4.9e-05
+    },
+    {
+      "round": 2,
+      "id": "call_5197Zjb9chI96gJa5SP9BFxo",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"7146000 / 90212 * 142.35 - 3862000 / 52904 * 142.35\"}",
+      "result": "{\"expression\": \"7146000 / 90212 * 142.35 - 3862000 / 52904 * 142.35\", \"result\": 884.4571621968771}",
+      "seconds": 0.000138
+    }
+  ],
+  "hit_round_limit": false,
+  "unanswered": false,
+  "seconds": 4.246,
+  "id": "Q-17",
+  "expected": {
+    "answer": "Harrowfield",
+    "value": 884
+  },
+  "correct": true
+}

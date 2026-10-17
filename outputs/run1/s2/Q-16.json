@@ -1,0 +1,66 @@
+{
+  "samples": [
+    {
+      "raw": "Ossbridge and Ossford together cover 1,284.6 + 846.2 = 2,130.8 square kilometres. Tarnvale covers 2,106.9 square kilometres, so the combined area is larger by 23.9 square kilometres.\n\nANSWER: yes | 23.9",
+      "parsed": [
+        "yes",
+        23.9
+      ]
+    },
+    {
+      "raw": "Ossbridge and Ossford combined: 1,284.6 + 846.2 = 2,130.8 km².  \nTarnvale: 2,106.9 km².  \nThe combined area is larger by 23.9 km².\n\nANSWER: yes | 23.9",
+      "parsed": [
+        "yes",
+        23.9
+      ]
+    },
+    {
+      "raw": "Ossbridge and Ossford combined area: 1,284.6 + 846.2 = 2,130.8 km².  \nTarnvale area: 2,106.9 km².  \nThe combined area is larger by 23.9 km².\n\nANSWER: yes | 23.9",
+      "parsed": [
+        "yes",
+        23.9
+      ]
+    },
+    {
+      "raw": "Ossbridge and Ossford have a combined area of 1,284.6 + 846.2 = 2,130.8 square kilometres. Tarnvale covers 2,106.9 square kilometres, so the combined area is larger by 23.9 square kilometres.\n\nANSWER: yes | 23.9",
+      "parsed": [
+        "yes",
+        23.9
+      ]
+    },
+    {
+      "raw": "Ossbridge and Ossford have a combined area of 1,284.6 + 846.2 = 2,130.8 square kilometres. Tarnvale covers 2,106.9 square kilometres, so the combined area is larger by 23.9 square kilometres.\n\nANSWER: yes | 23.9",
+      "parsed": [
+        "yes",
+        23.9
+      ]
+    }
+  ],
+  "votes": [
+    [
+      [
+        "yes",
+        23.9
+      ],
+      5
+    ]
+  ],
+  "parsed": [
+    "yes",
+    23.9
+  ],
+  "usage": {
+    "calls": 5,
+    "input_tokens": 11080,
+    "output_tokens": 342
+  },
+  "unanswered": false,
+  "temperature_used": 1.0,
+  "seconds": 6.877,
+  "id": "Q-16",
+  "expected": {
+    "answer": "yes",
+    "value": 23.9
+  },
+  "correct": true
+}

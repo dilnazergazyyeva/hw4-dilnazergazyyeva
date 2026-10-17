@@ -1,0 +1,20 @@
+{
+  "raw": "Brightwater density: 44,675 ÷ 921.4 = 48.5 residents/km²  \nMillbrook density: 37,203 ÷ 758.6 = 49.1 residents/km²  \n\nMillbrook is higher by 0.6 residents/km².\n\nANSWER: Millbrook | 0.6",
+  "parsed": [
+    "millbrook",
+    0.6
+  ],
+  "usage": {
+    "calls": 1,
+    "input_tokens": 2208,
+    "output_tokens": 71
+  },
+  "unanswered": false,
+  "seconds": 1.186,
+  "id": "Q-09",
+  "expected": {
+    "answer": "Millbrook",
+    "value": 0.6
+  },
+  "correct": true
+}

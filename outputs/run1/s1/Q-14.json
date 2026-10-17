@@ -1,0 +1,20 @@
+{
+  "raw": "Tarnvale: \\(5,207,000 \\div 71,388 \\div 365 = 0.2\\) litres per resident per day more than Ashgrove.\n\nANSWER: Tarnvale | 0.2",
+  "parsed": [
+    "tarnvale",
+    0.2
+  ],
+  "usage": {
+    "calls": 1,
+    "input_tokens": 2214,
+    "output_tokens": 50
+  },
+  "unanswered": false,
+  "seconds": 1.258,
+  "id": "Q-14",
+  "expected": {
+    "answer": "Ashgrove",
+    "value": 4.9
+  },
+  "correct": false
+}

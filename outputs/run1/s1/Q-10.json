@@ -1,0 +1,20 @@
+{
+  "raw": "Stonecairn was founded in 1837, while Coldharbour was founded in 1845. Stonecairn is 8 years older.\n\nANSWER: Stonecairn | 8",
+  "parsed": [
+    "stonecairn",
+    8.0
+  ],
+  "usage": {
+    "calls": 1,
+    "input_tokens": 2205,
+    "output_tokens": 44
+  },
+  "unanswered": false,
+  "seconds": 1.227,
+  "id": "Q-10",
+  "expected": {
+    "answer": "Stonecairn",
+    "value": 8
+  },
+  "correct": true
+}

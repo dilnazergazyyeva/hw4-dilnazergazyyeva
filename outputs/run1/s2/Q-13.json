@@ -1,0 +1,66 @@
+{
+  "samples": [
+    {
+      "raw": "Calculate percentage loss as:\n\n- Ossford: \\( (31,560 - 30,982) / 31,560 \\times 100 = 1.83\\% \\)\n- Stonecairn: \\( (15,473 - 14,926) / 15,473 \\times 100 = 3.53\\% \\)\n- Coldharbour: \\( (11,902 - 11,407) / 11,902 \\times 100 = 4.16\\% \\)\n\nColdharbour lost the largest percentage.\n\nANSWER: Coldharbour | 4.16",
+      "parsed": [
+        "coldharbour",
+        4.16
+      ]
+    },
+    {
+      "raw": "Stonecairn lost the largest percentage:\n\n- Ossford: \\(578 / 31,560 \\times 100 = 1.83\\%\\)\n- Stonecairn: \\(547 / 15,473 \\times 100 = 3.54\\%\\)\n- Coldharbour: \\(495 / 11,902 \\times 100 = 4.16\\%\\)\n\nANSWER: Coldharbour | 4.16",
+      "parsed": [
+        "coldharbour",
+        4.16
+      ]
+    },
+    {
+      "raw": "Population percentage loss:\n\n- Ossford: \\(578 / 31,560 \\times 100 = 1.83\\%\\)\n- Stonecairn: \\(547 / 15,473 \\times 100 = 3.54\\%\\)\n- Coldharbour: \\(495 / 11,902 \\times 100 = 4.16\\%\\)\n\nColdharbour lost the largest percentage.\n\nANSWER: Coldharbour | 4.16",
+      "parsed": [
+        "coldharbour",
+        4.16
+      ]
+    },
+    {
+      "raw": "Stonecairn lost 547 residents, which is \\(547 \\div 15,473 \\times 100 = 3.53\\%\\). Coldharbour lost 495 residents, or 4.16%, while Ossford lost 578 residents, or 1.83%. Therefore, Coldharbour had the largest percentage decrease.\n\nANSWER: Coldharbour | 4.16",
+      "parsed": [
+        "coldharbour",
+        4.16
+      ]
+    },
+    {
+      "raw": "Population decreases:\n\n- Ossford: \\(31,560 - 30,982 = 578\\), or \\(578 / 31,560 \\times 100 = 1.83\\%\\)\n- Stonecairn: \\(15,473 - 14,926 = 547\\), or \\(547 / 15,473 \\times 100 = 3.54\\%\\)\n- Coldharbour: \\(11,902 - 11,407 = 495\\), or \\(495 / 11,902 \\times 100 = 4.16\\%\\)\n\nColdharbour lost the largest percentage.\n\nANSWER: Coldharbour | 4.16",
+      "parsed": [
+        "coldharbour",
+        4.16
+      ]
+    }
+  ],
+  "votes": [
+    [
+      [
+        "coldharbour",
+        4.16
+      ],
+      5
+    ]
+  ],
+  "parsed": [
+    "coldharbour",
+    4.16
+  ],
+  "usage": {
+    "calls": 5,
+    "input_tokens": 11130,
+    "output_tokens": 543
+  },
+  "unanswered": false,
+  "temperature_used": 1.0,
+  "seconds": 8.308,
+  "id": "Q-13",
+  "expected": {
+    "answer": "Coldharbour",
+    "value": 4.16
+  },
+  "correct": true
+}

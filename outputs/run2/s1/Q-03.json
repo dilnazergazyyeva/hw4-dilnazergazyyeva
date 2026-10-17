@@ -1,0 +1,20 @@
+{
+  "raw": "Kelmarsh used more water per resident per day.\n\nLindenmoor: 2,151,400 m³ ÷ 29,051 ÷ 365 × 1,000 = 202.9 litres  \nKelmarsh: 1,739,000 m³ ÷ 24,117 ÷ 365 × 1,000 = 197.5 litres  \n\nDifference: 5.4 litres per resident per day.\n\nANSWER: Kelmarsh | 5.4",
+  "parsed": [
+    "kelmarsh",
+    5.4
+  ],
+  "usage": {
+    "calls": 1,
+    "input_tokens": 2214,
+    "output_tokens": 104
+  },
+  "unanswered": false,
+  "seconds": 1.564,
+  "id": "Q-03",
+  "expected": {
+    "answer": "Lindenmoor",
+    "value": 5.3
+  },
+  "correct": false
+}

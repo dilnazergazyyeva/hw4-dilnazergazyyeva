@@ -1,0 +1,20 @@
+{
+  "raw": "Redfen and Kelmarsh combined: 20,934 + 24,117 = 45,051.  \nOssford: 30,982.  \nDifference: 45,051 − 30,982 = 14,069, so the combined population is larger.\n\nANSWER: yes | 14069",
+  "parsed": [
+    "yes",
+    14069.0
+  ],
+  "usage": {
+    "calls": 1,
+    "input_tokens": 2214,
+    "output_tokens": 68
+  },
+  "unanswered": false,
+  "seconds": 1.545,
+  "id": "Q-06",
+  "expected": {
+    "answer": "yes",
+    "value": 14069
+  },
+  "correct": true
+}

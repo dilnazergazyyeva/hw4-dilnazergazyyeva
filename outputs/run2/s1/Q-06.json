@@ -1,0 +1,20 @@
+{
+  "raw": "Redfen and Kelmarsh: 20,934 + 24,117 = 45,051. Ossford has 30,982 residents, so the combined population is larger by 14,069 residents.\n\nANSWER: yes | 14069",
+  "parsed": [
+    "yes",
+    14069.0
+  ],
+  "usage": {
+    "calls": 1,
+    "input_tokens": 2214,
+    "output_tokens": 54
+  },
+  "unanswered": false,
+  "seconds": 1.268,
+  "id": "Q-06",
+  "expected": {
+    "answer": "yes",
+    "value": 14069
+  },
+  "correct": true
+}
