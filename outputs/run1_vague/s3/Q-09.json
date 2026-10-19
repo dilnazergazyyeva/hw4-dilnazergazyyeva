@@ -1,0 +1,80 @@
+{
+  "raw": "Millbrook has the higher population density by 0.6 residents per square kilometre.\n\nANSWER: Millbrook | 0.6",
+  "parsed": [
+    "millbrook",
+    0.6
+  ],
+  "usage": {
+    "calls": 4,
+    "input_tokens": 3045,
+    "output_tokens": 221
+  },
+  "rounds": 4,
+  "tool_calls": [
+    {
+      "round": 1,
+      "id": "call_OBe9LOUPZQ6Nq4p0gINaR6jI",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Brightwater\", \"field\": \"population_2025\"}",
+      "result": "{\"district\": \"Brightwater\", \"field\": \"population_2025\", \"value\": 44675, \"unit\": \"residents, 2025 census\", \"source\": \"NR-05\"}",
+      "seconds": 5e-05
+    },
+    {
+      "round": 1,
+      "id": "call_DmRXlr3b1mE7DAB3VYzhV3h6",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Brightwater\", \"field\": \"area_km2\"}",
+      "result": "{\"district\": \"Brightwater\", \"field\": \"area_km2\", \"value\": 921.4, \"unit\": \"square kilometres\", \"source\": \"NR-05 + NR-16\", \"note\": \"profile NR-05 gives 912.4 but correction notice NR-16 takes precedence; corrected value used\"}",
+      "seconds": 4.4e-05
+    },
+    {
+      "round": 1,
+      "id": "call_mLT19I3BDiSjx7A6Q8LWrmZM",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Millbrook\", \"field\": \"population_2025\"}",
+      "result": "{\"district\": \"Millbrook\", \"field\": \"population_2025\", \"value\": 37203, \"unit\": \"residents, 2025 census\", \"source\": \"NR-11\"}",
+      "seconds": 2.6e-05
+    },
+    {
+      "round": 1,
+      "id": "call_xBwPVsJqsX2E3KMY7fFjmhAO",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Millbrook\", \"field\": \"area_km2\"}",
+      "result": "{\"district\": \"Millbrook\", \"field\": \"area_km2\", \"value\": 758.6, \"unit\": \"square kilometres\", \"source\": \"NR-11\"}",
+      "seconds": 2.2e-05
+    },
+    {
+      "round": 2,
+      "id": "call_18CdxGM6CUtw8Wg853Ull0gF",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"44675 / 921.4\"}",
+      "result": "{\"expression\": \"44675 / 921.4\", \"result\": 48.48599956587801}",
+      "seconds": 8.3e-05
+    },
+    {
+      "round": 2,
+      "id": "call_ArzvtMWGzcnxn3dE2lbNJENw",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"37203 / 758.6\"}",
+      "result": "{\"expression\": \"37203 / 758.6\", \"result\": 49.041655681518584}",
+      "seconds": 4.3e-05
+    },
+    {
+      "round": 3,
+      "id": "call_fFBbLUQhxs7XYEYYhjgi1in7",
+      "tool": "calculate",
+      "arguments": "{\"expression\":\"49.041655681518584 - 48.48599956587801\"}",
+      "result": "{\"expression\": \"49.041655681518584 - 48.48599956587801\", \"result\": 0.5556561156405735}",
+      "seconds": 8.6e-05
+    }
+  ],
+  "hit_round_limit": false,
+  "unanswered": false,
+  "seconds": 7.179,
+  "id": "Q-09",
+  "expected": {
+    "answer": "Millbrook",
+    "value": 0.6
+  },
+  "correct": true
+}

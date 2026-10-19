@@ -1,6 +1,6 @@
 # HW4 — submission
 
-**AI assistance:** I used Claude (Anthropic) to help draft Part A, `tools.py`, the tests, `strategies.py`, `run.py` and a first draft of the notes in this file. I read and checked the code, ran everything myself, and wrote Part C from my own logs. <!-- ✏️ EDIT THIS so it is exactly true for you. -->
+**AI assistance:** I used Claude (Anthropic) to draft Part A, the code (`tools.py`, `strategies.py`, `run.py`), the tests and the first draft of the written answers in this file. I ran the code and the tests myself, with my own API key, and the numbers below come from my own runs in `outputs/`.
 
 ---
 
@@ -188,17 +188,22 @@ Why not: (1) the 20 questions use many different formulas, so I would need many 
 
 ### What I changed from Part A while coding
 
-None so far. <!-- ✏️ If you change a tool, the loop or the rules while you test, write what and why here. Do NOT edit Part A. -->
+Two things, both forced by the environment, not by the plan.
+
+- I added `reasoning_effort="none"` to every request. Without it the API refuses to use tools with this model in Chat Completions (a 400 error that says so). I set it for all three strategies, so the comparison stays fair.
+- I save result files as UTF-8. On Windows the first S1 test crashed when the model wrote the sign ÷ in its answer.
+
+The tools and the loop work as I planned in A2 and A3.
 
 ### B2 — Tests
 
-```
+```text
 ================================================== test session starts ==================================================
 platform win32 -- Python 3.13.15, pytest-9.1.1, pluggy-1.7.0 -- C:\Users\user\AppData\Local\Programs\Python\Python313\python.exe
 cachedir: .pytest_cache
 rootdir: C:\Users\user\ai hw\hw4-dilnazergazyyeva
 plugins: anyio-4.10.0
-collected 24 items                                                                                                       
+collected 24 items
 
 tests/test_tools.py::test_lookup_correct_2025_number PASSED                                                        [  4%]
 tests/test_tools.py::test_lookup_case_and_spaces_ok PASSED                                                         [  8%]
@@ -225,92 +230,112 @@ tests/test_tools.py::test_calc_bad_input_types_and_syntax PASSED                
 tests/test_tools.py::test_run_tool_always_returns_json_string PASSED                                               [ 95%]
 tests/test_tools.py::test_tool_definitions_shape PASSED                                                            [100%]
 
-================================================== 24 passed in 0.68s ===================================================
+================================================== 24 passed in 0.86s ===================================================
 ```
 
 ### B3 — The loop
 
-- Round limit, and why: **12 rounds**. Parallel calls count as one round. The hardest question (e.g. Q-20, three districts × two fields, then one or two calculations) needs about 3–4 rounds when the model batches calls and about 8–9 if it calls one tool at a time, so 12 leaves room for one or two retries after an error but still stops a loop that never ends (each round also costs more, because the whole conversation is sent again).
-- Where the logs are: `outputs/run<N>/s3/Q-xx.json` (every tool call: round, id, tool, arguments, result, seconds), plus `outputs/run<N>/<strategy>/summary.json`.
-- Real Q-09 conversation compared with my A3 version, what is different: <!-- ✏️ open outputs/run1/s3/Q-09.json and write what differs: number of rounds, were calls batched, did it call calculate once or several times, did it make an error? -->
+- Round limit, and why: 12 rounds. One round is one call to the model, and parallel tool calls count as one round. I chose 12 before I knew how many I would need, to leave room for retries after errors and still stop a loop that never ends. In practice it was far more than enough: every S3 question I checked took 3 or 4 rounds, and none hit the limit (0 unanswered in both runs). The model asks for all the facts it needs in one round, then for the calculations, then answers.
+- Where the logs are: `outputs/run1/s3/Q-xx.json` and `outputs/run2/s3/Q-xx.json`. Each has every tool call with its round, id, tool name, arguments, result and seconds. `summary.json` in each folder has the totals.
+- Real Q-09 conversation compared with my A3 version, what is different: the real conversation (`outputs/run1/s3/Q-09.json`) had 4 rounds and 7 tool calls, and in A3 I wrote 3 model turns and 5 calls. The lookups were the same as in my plan: four of them in round 1, with the same results, including 921.4 for the Brightwater area and the note about the correction notice NR-16. The difference is in the arithmetic. I planned one `calculate` call for the whole expression. The model made two (`44675 / 921.4` and `37203 / 758.6`, in parallel, in round 2) and then a third call in round 3 to subtract the two results (`49.041655681518584 - 48.48599956587801`, which returned 0.5556561156405735). Round 4 was the answer, `ANSWER: Millbrook | 0.6`. So it split the calculation into small steps, which costs one more round but is easy to follow in the log.
 
 ### B4 — Three strategies
 
-**What I kept the same:** model `gpt-5.6-luna` for everything; same 20 questions in the same order; same system sentence about the Nine Rivers Region; same question text, same "round to N decimals" line (taken from `decimals` in `questions.json`, never the answer) and same final line `ANSWER: <name or yes/no> | <number>`; S1 and S2 get the same 17 documents (all of them, archived ones included); S3 gets no documents; same parser and same scorer; `k = 5` and `temperature = 1.0` for S2 only (S1 and S3 use the model default); S3 round limit 12. <!-- ✏️ add: did the model accept temperature? (outputs/.../summary.json -> temperature_rejected_by_model). Add anything else you changed. -->
+**What I kept the same:** model `gpt-5.6-luna` for everything, with `reasoning_effort="none"`. The same 20 questions in the same order. The same one-sentence system prompt about the Nine Rivers Region. The same question text, the same line "Round the number to N decimal places" (N comes from `decimals` in `questions.json`, never from the answer) and the same last line `ANSWER: <name or yes/no> | <number>`. S1 and S2 get the same 17 documents, archived ones included, and S3 gets none. The same parser and the same scorer. S2 uses k = 5 and temperature 1.0. The model accepted the temperature (`temperature_rejected_by_model` is false), and S1 and S3 use the default. The S3 round limit is 12. Prices I used for cost: $0.20 per 1M input tokens and $1.20 per 1M output tokens. Both full runs together cost about $0.17.
 
-**My rule for a correct answer** (written before the first full run): the name (or yes/no) must equal the expected `answer`, ignoring upper/lower case; and the number, rounded to `decimals`, must equal `value` rounded to `decimals`, allowing a difference of 1 in the last digit (so 0.6 vs 0.5 or 0.7 counts for Q-09). An answer with no `ANSWER:` line, or an S3 run that hits the round limit, counts as unanswered and wrong. (Why 1 digit of tolerance: the model rounds its own numbers and a tiny rounding difference is not a reasoning error. Why 20 questions: that is what the course provides; see C4 for how little it can prove.)
+**My rule for a correct answer** (written before the first full run): the name (or yes/no) must be equal to the expected answer, ignoring capital letters. The number, rounded to `decimals`, must equal `value` rounded to `decimals`, with a difference of 1 in the last digit allowed. A reply without an `ANSWER:` line, or an S3 run that hits the round limit, is unanswered and wrong. I allow one digit because the model rounds by itself, and a tiny rounding gap is not a reasoning mistake. I used 20 questions because that is what the course gives. C4 says how little that proves.
 
 | Run | Strategy | Correct /20 | Unanswered | Input tokens | Output tokens | Median seconds per question | Total seconds | Cost ($) |
 |---|---|---:|---:|---:|---:|---:|---:|---:|
-| 1 | S1 direct | | | | | | | |
-| 1 | S2 think and vote (k = 5) | | | | | | | |
-| 1 | S3 tools | | | | | | | |
-| 2 | S1 direct | | | | | | | |
-| 2 | S2 think and vote (k = 5) | | | | | | | |
-| 2 | S3 tools | | | | | | | |
-
-<!-- ✏️ Fill from outputs/run1/*/summary.json and outputs/run2/*/summary.json. Set PRICE_IN and PRICE_OUT (USD per 1M tokens, from the official price page) before running so the cost column is computed. -->
+| 1 | S1 direct | 16 | 0 | 44279 | 1772 | 1.67 | 34.7 | 0.0110 |
+| 1 | S2 think and vote (k = 5) | 16 | 0 | 222195 | 9070 | 7.99 | 160.5 | 0.0553 |
+| 1 | S3 tools | 20 | 0 | 57635 | 4341 | 4.68 | 99.7 | 0.0167 |
+| 2 | S1 direct | 13 | 0 | 44279 | 1705 | 1.63 | 33.9 | 0.0109 |
+| 2 | S2 think and vote (k = 5) | 17 | 0 | 222195 | 9166 | 7.43 | 152.5 | 0.0554 |
+| 2 | S3 tools | 20 | 0 | 60033 | 4452 | 4.93 | 96.0 | 0.0173 |
 
 **Per question (run 1):**
 
 | Question | S1 | S2 | S3 |
 |---|:---:|:---:|:---:|
-| Q-01 | | | |
-| Q-02 | | | |
-| Q-03 | | | |
-| Q-04 | | | |
-| Q-05 | | | |
-| Q-06 | | | |
-| Q-07 | | | |
-| Q-08 | | | |
-| Q-09 | | | |
-| Q-10 | | | |
-| Q-11 | | | |
-| Q-12 | | | |
-| Q-13 | | | |
-| Q-14 | | | |
-| Q-15 | | | |
-| Q-16 | | | |
-| Q-17 | | | |
-| Q-18 | | | |
-| Q-19 | | | |
-| Q-20 | | | |
+| Q-01 | ✓ | ✓ | ✓ |
+| Q-02 | ✓ | ✓ | ✓ |
+| Q-03 | ✓ | ✓ | ✓ |
+| Q-04 | ✓ | ✓ | ✓ |
+| Q-05 | ✗ | ✗ | ✓ |
+| Q-06 | ✓ | ✓ | ✓ |
+| Q-07 | ✓ | ✓ | ✓ |
+| Q-08 | ✓ | ✓ | ✓ |
+| Q-09 | ✓ | ✓ | ✓ |
+| Q-10 | ✓ | ✓ | ✓ |
+| Q-11 | ✓ | ✓ | ✓ |
+| Q-12 | ✓ | ✓ | ✓ |
+| Q-13 | ✓ | ✓ | ✓ |
+| Q-14 | ✗ | ✓ | ✓ |
+| Q-15 | ✓ | ✗ | ✓ |
+| Q-16 | ✓ | ✓ | ✓ |
+| Q-17 | ✗ | ✗ | ✓ |
+| Q-18 | ✓ | ✓ | ✓ |
+| Q-19 | ✓ | ✓ | ✓ |
+| Q-20 | ✗ | ✗ | ✓ |
 
 ---
 
 ## Part C — Explain and choose (Hard)
 
-> ✏️ **All of Part C must be written by you, from your own logs.** The rubric gives points only for your numbers, question ids and quotes. Hints are in the comments.
-
 ### C1 — Does the tool description matter?
 
-<!-- Run: python run.py --run 1 --strategy s3 --questions Q-01,Q-05,Q-09,Q-14,Q-20 --vague --tag vague  (the vague description is "Looks things up.") -->
+I ran S3 again on five questions with the one-line description "Looks things up." and changed nothing else.
 
 | Question | Calls (your description) | Calls (vague) | Answer (yours) | Answer (vague) |
 |---|---:|---:|---|---|
-| | | | | |
+| Q-01 | 7 | 5 | ossbridge, 4.6 | ossbridge, 4.6 |
+| Q-05 | 7 | 5 | coldharbour, 14235 | coldharbour, 14235 |
+| Q-09 | 7 | 7 | millbrook, 0.6 | millbrook, 0.6 |
+| Q-14 | 7 | 7 | ashgrove, 4.9 | ashgrove, 4.9 |
+| Q-20 | 10 | 10 | ashgrove, 2993 | ashgrove, 2993 |
 
-<!-- What changed: number of calls, inputs (did it still use the right field names? note the schema enum still shows them), answers. Why? -->
+With the vague description all five answers stayed correct (5 of 5). For the five questions together the run used 12,993 input tokens and 1,151 output tokens and took 31.5 seconds. Q-09 is the one I looked at in the log (`outputs/run1_vague/s3/Q-09.json`). The model made exactly the same 7 calls as with my description: the same four lookups, the same fields and the same three calculations, and it gave the same answer. The only differences were 3,045 input tokens instead of 3,477 (the shorter description is sent with every round) and 7.2 seconds instead of 5.5, which I think is just normal variation between runs. For the other questions the number of calls was the same on Q-14 (7) and Q-20 (10), and lower on Q-01 and Q-05 (5 instead of 7). I did not open those two logs, so I do not know why, but one possibility is that with the vague description the model put both divisions and the subtraction into fewer `calculate` calls. The answers were correct anyway. Why it still worked: the tool names, the parameter names (`district`, `field`, `expression`) and the list of allowed field names were still sent, and that already tells the model what the tools do. I did not test it, but I expect the description to matter for the rules that are written only in it: the tariff (`district='region'`) in Q-08 and Q-17, and the fact that archived profiles are ignored.
 
 ### C2 — Three mistakes explained
 
-<!-- One wrong answer per strategy (or the most expensive question if a strategy got everything right). Quote your logs (outputs/run1/<strategy>/Q-xx.json). Think about: why voting fixes random slips but not a systematic mistake (e.g. the same wrong document used 5 times); why a calculator removes errors (the model predicts digits, the tool computes them); why rounds cost more each time (the whole history is sent again). -->
+**S1, Q-05 (run 1).** The model got the district right (coldharbour) but the number wrong: 14344 instead of 14235. In its answer it writes "Stonecairn: 2,884.6 million ÷ 14,926 = 193,142 tenge per resident" and "Coldharbour: 2,366.9 million ÷ 11,407 = 207,486". The real values are about 193,260 and 207,495. So the Coldharbour division is almost right, but the Stonecairn one is off by about 120, and that goes straight into the answer. The model has no calculator here. It predicts the digits of a long division one after another, and nothing checks the result.
+
+**S2, Q-05 (run 1).** S2 asked five times and still got it wrong. The five samples gave 14329, 14342, 14348, 14356 and 14323, and all five are too high. In the samples the Coldharbour division is close every time (207,486 to 207,514, real value about 207,495), but Stonecairn comes out between 193,149 and 193,168 every time, while the real value is about 193,260. So the model made the same kind of slip in every sample, always in the same direction. Voting only helps when the mistakes are random and the right answer is the most common one. Here the five answers were all different, so each got one vote, and when there is a tie my code keeps the first sample (`votes` in `outputs/run1/s2/Q-05.json`). So the vote did not really vote. Q-20 in run 1 went the same way (2999 instead of 2993).
+
+**S3, the most expensive question.** S3 had no wrong answer, so I picked the question with the most tool calls: Q-11, with 10 calls in run 1 and 11 in run 2 (Q-20 also needed 10). The run 1 log (`outputs/run1/s3/Q-11.json`) shows 4 rounds. In round 1 there are six `lookup` calls (pupils and schools for Redfen, Ashgrove and Millbrook). In round 2 there are three divisions such as `3147 / 10`. In round 3 there is one subtraction, `370.8 - 314.7`, which returned 56.10000000000002, and round 4 is the answer `ANSWER: Redfen | 56.10`. It used 3,878 input tokens and 281 output tokens. Each round sends the whole conversation again (system prompt, question, every earlier tool call and every result), so the input grows round after round and the total is more than rounds times one call.
+
+Why the calculator removes mistakes: the model only decides what to compute, for example `7146000 * 142.35 / 90212`, and the tool computes it exactly. The model cannot do that by itself, because its arithmetic is a guess made from patterns. This is why S3 got Q-05, Q-17 and Q-20 right in both runs, and S1 and S2 missed them at least once. It stops working when the model writes the wrong expression or asks for the wrong field. The tool would then return an exact number for the wrong question.
 
 ### C3 — Which strategy I would use, and what would change it
 
-<!-- Compare accuracy, tokens, time; say why you did not choose each other strategy; give at least two situations that change the choice (small budget, strict time limit, 1,000x more documents, no arithmetic) and the strategy for each. -->
+I would use S3. It was right on 20 of 20 questions in both runs, while S1 got 16 and 13 and S2 got 16 and 17. It used about 1.3 times the tokens of S1 (57,635 against 44,279 in run 1, 60,033 in run 2) and only about a quarter of the tokens of S2. The cost was about $0.017 per run, against $0.011 for S1 and $0.055 for S2. The time per question was about 4.7 to 4.9 seconds, against about 1.6 for S1 and 7.4 to 8.0 for S2.
+
+I did not choose S1 because it is wrong exactly where the work is arithmetic or where the names are close. It missed four questions in run 1 and seven in run 2. It is cheapest and fastest, so it is a good choice only if the questions are easy.
+
+I did not choose S2 because it costs five times as much as S1 (the documents are sent five times) and was no more reliable: 16 and 17 against 16 and 13. It also does not fix mistakes that are the same in every sample.
+
+What would change my choice:
+
+- 1,000 times more documents. S1 and S2 would not fit in the prompt at all, and each call would cost a fortune. S3 would still work if `lookup` searches an index and returns only a few short matches.
+- Questions with no real arithmetic and a strict time limit, say under two seconds. S1 got Q-06, Q-10, Q-11, Q-12, Q-13, Q-16, Q-18 and Q-19 right in both runs, so for this kind of question S1 is enough and S3 is a slower way to get the same answer.
+- Questions where one wrong number is very costly and the documents are small. Still S3, because the calculator makes the arithmetic exact.
 
 ### C4 — How sure I can be
 
-<!-- How different were run 1 and run 2? Is the gap between the two best strategies bigger than that? With 20 questions, one question = 5 percentage points. How many questions would you want? -->
+The two runs differed by 3 questions for S1 (16 and 13), by 1 for S2 (16 and 17), and by 0 for S3 (20 and 20). S3 was ahead of S2 by 4 and 3 questions, which is about the same size as the swing of S1 between its own two runs. So I trust that S3 is better than S1 more than I trust that it is better than S2. The order S3 first is the same in both runs, but two runs is not many.
+
+One question is 5 points of accuracy, so one lucky or unlucky answer moves the result a lot. My scoring is also generous. Some answers passed only because of the one-digit rule, for example S2 on Q-09 in run 1 (0.5 instead of 0.6) and S2 on Q-14 in both runs (4.8 instead of 4.9). With a strict rule S1 and S2 would look even worse. Another limit: my `lookup` is written for these 17 documents, so 20 of 20 may not carry over to a different corpus.
+
+As a rough guess, to trust a gap of about 10 points I would want around 100 questions and several repeated runs. I did not test this, it is only the usual rule that the error of a percentage shrinks with the square root of the number of questions.
 
 ### Final questions
 
-1. When the model sends a `tool_calls` message, **nothing has run yet**. The message is only a request: the model wrote the function name and its arguments as text. My code decides whether to run anything, runs it, and sends the result back; the model never executes code itself.
-2. `arguments` arrives as a **string** of JSON because the API returns plain text from the model and the model can write anything. If I pass the string straight into my function, Python would treat it as one big string (not `district` and `field`), and invalid JSON, missing keys or wrong types could crash the program. So I run `json.loads`, check it is a dict, and return an error message to the model if it is not.
-3. <!-- ✏️ run: python run.py --measure-tools   -> outputs/tool_definition_tokens.json. Write the number. -->
-4. <!-- ✏️ S2 input tokens ÷ S1 input tokens, and cost ratio, from your table. Explain: S2 sends the same 2,300-token documents 5 times and each reply is longer because the model writes its reasoning. -->
-5. <!-- ✏️ find it: look at the "rounds" field in outputs/run1/s3/*.json, pick the biggest, say why (many facts needed? errors? retries?). -->
-6. With 100,000 documents I could not parse the whole corpus into memory on each call or put it in the prompt. I would build the index once (for example a search index or a table of facts extracted in advance, or embeddings with BM25), have `lookup` return only the top few short matches, and keep the archived/corrections rules as filters on metadata so they are applied by code and not by the model.
-7. `calculate` never calls `eval`/`exec`: it parses with `ast` and only walks nodes for numbers, `+ - * / **` and unary signs, so anything else (calls, attributes, names, strings) is refused. Limits on length (200 chars), exponent (≤ 100) and size (≤ 1e18) stop freezing. The model can still make it misbehave in small ways: send a very long chain of allowed operations, ask for wrong formulas (a correct tool does not stop a wrong expression), or loop forever, which is why the loop has a round limit.
-8. <!-- ✏️ From your own results: which questions did S3 win (many steps and arithmetic, e.g. growth, per-person costs?) and which did tools not help (e.g. Q-10, a simple comparison of founding years, or a question the model already got right in S1)? Name question ids. -->
+1. When the model sends a `tool_calls` message, nothing has run yet. It is only a request, written as text: a function name and its arguments. My code decides whether to run it, runs it, and sends the result back. The model never runs code itself.
+2. `arguments` arrives as a string because the API returns text, and the model can write anything in it. If I pass the string straight into my function, Python sees one long string and not `district` and `field`, and broken JSON or missing keys can crash the program. So I use `json.loads`, check that the result is a dictionary, and send an error message back to the model if it is not.
+3. The two tool definitions add 409 input tokens to every S3 request. I measured it by sending the same short message with and without the tools (`python run.py --measure-tools`, saved in `outputs/tool_definition_tokens.json`). Over a question with 3 or 4 rounds that is paid 3 or 4 times.
+4. S2 cost 5.0 times more than S1 in run 1 ($0.0553 against $0.0110) and 5.1 times in run 2. The input tokens are 222,195 against 44,279. The reason is that S2 sends the same documents five times for every question. The output is about five times larger too (9,070 against 1,772 tokens), because it is five step by step answers and not one short one.
+5. Q-11 needed the most tool calls (10 in run 1 and 11 in run 2), then Q-20 (10 in both runs) and Q-13 (9). No question needed more than 4 rounds and many tied at 4, so rounds alone do not tell them apart. In the Q-11 log (run 1) the model asked for all six facts in round 1 (pupils and schools of three districts), then for the three divisions in round 2, then for one subtraction in round 3, and answered in round 4. Three districts with two facts each, and a division for each, is why it needed so many calls, and asking for them in parallel is why it did not need many rounds.
+6. With 100,000 documents I could not load everything into memory for each call or put it in a prompt. I would build an index once, for example a search index or a table of facts extracted in advance, and `lookup` would return only the top few short matches. The rules about archived profiles and corrections would stay in code, as filters, so the model does not have to choose.
+7. `calculate` never uses `eval` or `exec`. It reads the expression with `ast` and walks only the nodes for numbers, `+ - * / **` and unary signs. Anything else (calls, attributes, names, strings) is refused. The length (200 characters), the exponent (at most 100) and the size of numbers (at most 1e18) are limited, so `9**9**9` cannot freeze it. The model can still misbehave in small ways: it can ask for a wrong formula, which the tool computes correctly, or keep asking forever, which is why the loop has a round limit.
+8. Tools helped most on questions where the model had to divide or multiply long numbers: Q-05, Q-17 and Q-20. S1 and S2 missed each of them at least once, and S2 missed Q-05 and Q-17 in both runs, while S3 was right every time. Tools helped least on simple questions without hard arithmetic, like Q-10 (the age difference between two districts) or Q-06 (a sum of two populations). S1 got these right in both runs, faster and cheaper.
